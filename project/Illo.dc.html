@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><style>
+@keyframes illoSand{0%{transform:translateY(0);opacity:1}100%{transform:translateY(13px);opacity:0}}
+@keyframes illoDrop{0%{transform:translateY(0);opacity:0}20%{opacity:.9}100%{transform:translateY(16px);opacity:0}}
+@keyframes illoBoat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-3px) rotate(2deg)}}
+</style></helmet>
+<div style="width:100%;display:flex;align-items:flex-end;justify-content:center">
+  <sc-if value="{{ k_hourglass }}"><svg viewBox="0 0 108 170" style="width:100%;height:auto;display:block;overflow:visible">
+    <g stroke="#3D3A46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M26,18 h56 a6,6 0 0 0 0,-12 h-56 a6,6 0 0 0 0,12"></path>
+      <path d="M26,164 h56 a6,6 0 0 1 0,-12 h-56 a6,6 0 0 1 0,12"></path>
+      <path d="M32,18 C32,58 54,72 54,85 C54,98 32,112 32,152"></path>
+      <path d="M76,18 C76,58 54,72 54,85 C54,98 76,112 76,152"></path>
+      <path d="M35,22 h38 C73,54 56,68 54,82 C52,68 35,54 35,22 Z" fill="#E8A87C" fill-opacity=".55" stroke="none"></path>
+      <path d="M40,148 h28 C68,128 58,120 54,118 C50,120 40,128 40,148 Z" fill="#E8A87C" fill-opacity=".8" stroke="none"></path>
+      <path d="M54,88 v22" stroke="#E8A87C" stroke-width="2.4" style="animation:illoSand 1.4s linear infinite"></path>
+    </g>
+  </svg></sc-if>
+
+  <sc-if value="{{ k_dotgrid }}"><svg viewBox="0 0 200 150" style="width:100%;height:auto;display:block">
+    <sc-for list="{{ dots }}" as="d" hint-placeholder-count="0">
+      <circle cx="{{ d.x }}" cy="{{ d.y }}" r="{{ d.r }}" fill="{{ d.fill }}" stroke="#3D3A46" stroke-opacity="{{ d.so }}" stroke-width="1.5"></circle>
+    </sc-for>
+  </svg></sc-if>
+
+  <sc-if value="{{ k_moonrow }}"><svg viewBox="0 0 220 48" style="width:100%;height:auto;display:block">
+    <defs>
+      <mask id="illoM1"><rect width="220" height="48" fill="#fff"></rect><circle cx="34" cy="24" r="19" fill="#000"></circle></mask>
+      <mask id="illoM2"><rect width="220" height="48" fill="#fff"></rect><rect x="66" width="40" height="48" fill="#000"></rect></mask>
+      <mask id="illoM3"><rect width="220" height="48" fill="#fff"></rect><circle cx="128" cy="24" r="19" fill="#000"></circle></mask>
+    </defs>
+    <g fill="#5B6ACF" fill-opacity=".14">
+      <circle cx="24" cy="24" r="17"></circle><circle cx="66" cy="24" r="17"></circle><circle cx="110" cy="24" r="17"></circle><circle cx="154" cy="24" r="17"></circle><circle cx="196" cy="24" r="17"></circle>
+    </g>
+    <g fill="#FFF6E5">
+      <circle cx="24" cy="24" r="17" mask="url(#illoM1)"></circle>
+      <circle cx="66" cy="24" r="17" mask="url(#illoM2)"></circle>
+      <circle cx="110" cy="24" r="17" mask="url(#illoM3)"></circle>
+      <circle cx="154" cy="24" r="17"></circle>
+    </g>
+    <g stroke="#3D3A46" stroke-width="2" stroke-opacity=".5" fill="none">
+      <circle cx="24" cy="24" r="18"></circle><circle cx="66" cy="24" r="18"></circle><circle cx="110" cy="24" r="18"></circle><circle cx="154" cy="24" r="18"></circle><circle cx="196" cy="24" r="18"></circle>
+    </g>
+  </svg></sc-if>
+
+  <sc-if value="{{ k_boat }}"><svg viewBox="0 0 180 120" style="width:100%;height:auto;display:block;overflow:visible">
+    <g stroke="#3D3A46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M12,44 c10,-8 22,-6 30,2 c6,5 12,6 18,4"></path>
+      <path d="M18,44 c-2,8 2,14 8,15"></path>
+      <g style="animation:illoBoat 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center">
+        <path d="M78,74 h44 l-7,13 h-30 Z" fill="#9B8DFF" fill-opacity=".45"></path>
+        <path d="M100,74 v-22 l16,22"></path>
+        <path d="M100,52 l-16,22"></path>
+      </g>
+      <path d="M56,100 c8,-5 16,-5 24,0 c8,5 16,5 24,0 c8,-5 16,-5 24,0" stroke-opacity=".4"></path>
+      <path d="M66,112 c8,-5 16,-5 24,0 c8,5 16,5 24,0" stroke-opacity=".22"></path>
+    </g>
+  </svg></sc-if>
+
+  <sc-if value="{{ k_emptyframe }}"><svg viewBox="0 0 168 168" style="width:100%;height:auto;display:block">
+    <rect x="10" y="10" width="148" height="148" rx="30" fill="#FFFFFF" fill-opacity=".45" stroke="#3D3A46" stroke-opacity=".4" stroke-width="2" stroke-dasharray="7 9" stroke-linecap="round"></rect>
+    <g stroke="#3D3A46" stroke-opacity=".28" stroke-width="2" stroke-linecap="round"><path d="M84,64 v40 M64,84 h40"></path></g>
+  </svg></sc-if>
+
+  <sc-if value="{{ k_homescreen }}"><svg viewBox="0 0 120 168" style="width:100%;height:auto;display:block">
+    <rect x="6" y="6" width="108" height="156" rx="20" fill="#FFFFFF" fill-opacity=".5" stroke="#3D3A46" stroke-width="2" stroke-opacity=".55"></rect>
+    <rect x="44" y="12" width="32" height="5" rx="2.5" fill="#3D3A46" fill-opacity=".3"></rect>
+    <rect x="18" y="30" width="38" height="38" rx="11" fill="#6B5CE7" fill-opacity=".22" stroke="#3D3A46" stroke-width="2" stroke-opacity=".45"></rect>
+    <rect x="64" y="30" width="38" height="38" rx="11" fill="#7FC8B8" fill-opacity=".3" stroke="#3D3A46" stroke-width="2" stroke-opacity=".45"></rect>
+    <rect x="18" y="78" width="84" height="38" rx="11" fill="#E8A87C" fill-opacity=".25" stroke="#3D3A46" stroke-width="2" stroke-opacity=".45"></rect>
+    <g fill="#3D3A46" fill-opacity=".22"><circle cx="30" cy="132" r="7"></circle><circle cx="50" cy="132" r="7"></circle><circle cx="70" cy="132" r="7"></circle><circle cx="90" cy="132" r="7"></circle></g>
+    <rect x="42" y="150" width="36" height="4" rx="2" fill="#3D3A46" fill-opacity=".3"></rect>
+  </svg></sc-if>
+
+  <sc-if value="{{ k_cloud }}"><svg viewBox="0 0 150 120" style="width:100%;height:auto;display:block">
+    <g stroke="#3D3A46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M42,74 a20,20 0 0 1 4,-39 a26,26 0 0 1 48,6 a18,18 0 0 1 -4,33 Z" fill="#FFFFFF" fill-opacity=".62"></path>
+      <path d="M75,86 c5,7 8,11 8,15 a8,8 0 0 1 -16,0 c0,-4 3,-8 8,-15 Z" fill="#5B6ACF" fill-opacity=".35" style="animation:illoDrop 2.6s ease-in infinite;transform-box:fill-box;transform-origin:center"></path>
+    </g>
+  </svg></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:220,&quot;height&quot;:200},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;hourglass&quot;,&quot;dotgrid&quot;,&quot;moonrow&quot;,&quot;boat&quot;,&quot;emptyframe&quot;,&quot;homescreen&quot;,&quot;cloud&quot;],&quot;default&quot;:&quot;hourglass&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;filled&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:62,&quot;min&quot;:0,&quot;max&quot;:91,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const k = this.props.kind || 'hourglass';
+    const filled = Number(this.props.filled ?? 62);
+    const dots = [];
+    let i = 0;
+    for (let r = 0; r < 7; r++) {
+      for (let c = 0; c < 13; c++) {
+        const on = i < filled;
+        dots.push({ x: 10 + c * 15, y: 12 + r * 21, r: on ? 5.2 : 4.4, fill: on ? '#7FC8B8' : 'transparent', so: on ? 0.35 : 0.4 });
+        i++;
+      }
+    }
+    return {
+      dots,
+      k_hourglass: k === 'hourglass', k_dotgrid: k === 'dotgrid', k_moonrow: k === 'moonrow',
+      k_boat: k === 'boat', k_emptyframe: k === 'emptyframe', k_homescreen: k === 'homescreen', k_cloud: k === 'cloud'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><style>
+body{margin:0;background:#EDEAE4;font-family:ui-rounded,"SF Pro Rounded",-apple-system,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#6B5CE7;text-decoration:none}a:hover{color:#5849c9}
+@keyframes ngRing{0%{stroke-dashoffset:515}}
+</style></helmet>
+
+<div style="padding:56px 56px 80px;display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Needgets · Phần 2</div>
+    <div style="font-size:40px;font-weight:700;letter-spacing:-.6px;color:#2A2733">Màn hình chính · 7 + 2 biến thể đêm</div>
+    <div style="font-size:17px;line-height:1.45;color:rgba(42,39,51,.6);width:760px;text-wrap:pretty">Nee vắng mặt ở Thư viện, Trình sửa và Cài đặt — có mặt khắp nơi thì thành giấy dán tường. Lịch âm ở đây tính thật từ thuật toán Hồ Ngọc Đức: ngày âm, can chi, tiết khí, giờ hoàng đạo của hôm nay.</div>
+  </div>
+
+  <div style="width:1840px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N1</span><span style="font-size:15px;font-weight:500;color:#2A2733">Trang chủ</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:20px;top:100px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733"><span>9:41</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:71px;left:20px;right:20px;display:flex;align-items:center;gap:12px">
+          <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;color:#2A2733">Chào Minh</div>
+          <dc-import name="Nee" expression="happy" phase="full" style="width:44px;flex:0 0 44px" hint-size="44px,50px"></dc-import>
+        </div>
+        <div style="position:absolute;top:140px;left:20px;right:20px;height:300px;border-radius:28px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1)">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">1440 · hôm nay</div>
+          <div style="position:absolute;left:0;right:0;top:56px;display:flex;justify-content:center">
+            <div style="position:relative;width:212px;height:212px">
+              <svg width="212" height="212" viewBox="0 0 212 212" style="display:block">
+                <circle cx="106" cy="106" r="94" fill="none" stroke="rgba(42,39,51,.08)" stroke-width="12"></circle>
+                <circle cx="106" cy="106" r="94" fill="none" stroke="#6B5CE7" stroke-width="12" stroke-linecap="round" stroke-dasharray="590.6" stroke-dashoffset="{{ ringOffset }}" transform="rotate(-90 106 106)"></circle>
+              </svg>
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+                <div style="font-size:64px;font-weight:700;letter-spacing:-1.28px;font-variant-numeric:tabular-nums;line-height:1;color:#2A2733">{{ minsLeft }}</div>
+                <div style="font-size:13px;color:rgba(42,39,51,.6)">phút còn lại</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;top:456px;left:20px;right:20px;display:flex;gap:12px">
+          <div style="flex:1;display:flex;flex-direction:column;gap:12px">
+            <div style="height:168px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#9B8DFF">Đời</div>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#2A2733">{{ lifeDays }}</div>
+                <div style="font-size:13px;color:rgba(42,39,51,.6)">ngày còn lại</div>
+              </div>
+            </div>
+            <div style="height:170px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#A8DCC8">Bình an</div>
+              <div style="font-size:17px;line-height:1.45;color:#2A2733;text-wrap:pretty">Chậm lại một chút cũng không muộn.</div>
+            </div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:12px">
+            <div style="height:200px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;justify-content:space-between;gap:12px">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#7FC8B8">Năm</div>
+              <dc-import name="Illo" kind="dotgrid" filled="{{ yearFilled }}" style="width:100%" hint-size="100%,74px"></dc-import>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#2A2733">{{ yearDays }}</div>
+                <div style="font-size:13px;color:rgba(42,39,51,.6)">ngày còn lại</div>
+              </div>
+            </div>
+            <div style="height:138px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#5B6ACF">Lịch âm</div>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <div style="font-size:20px;font-weight:600;color:#2A2733">{{ lunarShort }}</div>
+                <div style="font-size:13px;color:rgba(42,39,51,.6)">{{ canChiDay }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;left:24px;right:24px;bottom:34px;height:68px;border-radius:22px;background:rgba(255,255,255,.96);border-top:1px solid rgba(42,39,51,.06);box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07);display:flex;align-items:center">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#6B5CE7"><path d="M11.3 3.3a1 1 0 0 1 1.4 0l8 7.1a1 1 0 0 1 .3.8V20a1.5 1.5 0 0 1-1.5 1.5h-4.3V15a1 1 0 0 0-1-1h-4.4a1 1 0 0 0-1 1v6.5H4.5A1.5 1.5 0 0 1 3 20v-8.8a1 1 0 0 1 .3-.8z"></path></svg>
+            <div style="width:4px;height:4px;border-radius:999px;background:#6B5CE7"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(42,39,51,.38)" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2.2"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="2.2"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="2.2"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="2.2"></rect></svg>
+            <div style="width:4px;height:4px"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(42,39,51,.38)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"></path></svg>
+            <div style="width:4px;height:4px"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(42,39,51,.38)" stroke-width="2" stroke-linecap="round"><path d="M3 7h5M13 7h8M3 17h11M19 17h2"></path><circle cx="10.5" cy="7" r="2.5"></circle><circle cx="16.5" cy="17" r="2.5"></circle></svg>
+            <div style="width:4px;height:4px"></div>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N1·đêm</span><span style="font-size:15px;font-weight:500;color:#2A2733">Trang chủ, biến thể đêm</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#17161C;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:20px;top:100px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#FAF8F5"><span>23:04</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#FAF8F5"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:71px;left:20px;right:20px;display:flex;align-items:center;gap:12px">
+          <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;color:#FAF8F5">Khuya rồi, Minh</div>
+          <dc-import name="Nee" expression="sleepy" phase="crescent" style="width:44px;flex:0 0 44px" hint-size="44px,50px"></dc-import>
+        </div>
+        <div style="position:absolute;top:140px;left:20px;right:20px;height:300px;border-radius:28px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);box-shadow:0 1px 2px rgba(0,0,0,.2),0 16px 40px rgba(0,0,0,.25)">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(250,248,245,.45)">1440 · hôm nay</div>
+          <div style="position:absolute;left:0;right:0;top:56px;display:flex;justify-content:center">
+            <div style="position:relative;width:212px;height:212px">
+              <svg width="212" height="212" viewBox="0 0 212 212" style="display:block">
+                <circle cx="106" cy="106" r="94" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="12"></circle>
+                <circle cx="106" cy="106" r="94" fill="none" stroke="#9B8DFF" stroke-width="12" stroke-linecap="round" stroke-dasharray="590.6" stroke-dashoffset="{{ ringOffsetNight }}" transform="rotate(-90 106 106)"></circle>
+              </svg>
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+                <div style="font-size:64px;font-weight:700;letter-spacing:-1.28px;font-variant-numeric:tabular-nums;line-height:1;color:#FAF8F5">56</div>
+                <div style="font-size:13px;color:rgba(250,248,245,.6)">phút còn lại</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;top:456px;left:20px;right:20px;display:flex;gap:12px">
+          <div style="flex:1;display:flex;flex-direction:column;gap:12px">
+            <div style="height:168px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#9B8DFF">Đời</div>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#FAF8F5">{{ lifeDays }}</div>
+                <div style="font-size:13px;color:rgba(250,248,245,.6)">ngày còn lại</div>
+              </div>
+            </div>
+            <div style="height:170px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#A8DCC8">Bình an</div>
+              <div style="font-size:17px;line-height:1.45;color:#FAF8F5;text-wrap:pretty">Đêm dài, mà bạn không phải thức cùng nó.</div>
+            </div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:12px">
+            <div style="height:200px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;justify-content:space-between;gap:12px">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#7FC8B8">Năm</div>
+              <dc-import name="Illo" kind="dotgrid" filled="{{ yearFilled }}" style="width:100%" hint-size="100%,74px"></dc-import>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#FAF8F5">{{ yearDays }}</div>
+                <div style="font-size:13px;color:rgba(250,248,245,.6)">ngày còn lại</div>
+              </div>
+            </div>
+            <div style="height:138px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#5B6ACF">Lịch âm</div>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <div style="font-size:20px;font-weight:600;color:#FAF8F5">{{ lunarShort }}</div>
+                <div style="font-size:13px;color:rgba(250,248,245,.6)">{{ canChiDay }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;left:24px;right:24px;bottom:34px;height:68px;border-radius:22px;background:rgba(255,255,255,.07);border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#9B8DFF"><path d="M11.3 3.3a1 1 0 0 1 1.4 0l8 7.1a1 1 0 0 1 .3.8V20a1.5 1.5 0 0 1-1.5 1.5h-4.3V15a1 1 0 0 0-1-1h-4.4a1 1 0 0 0-1 1v6.5H4.5A1.5 1.5 0 0 1 3 20v-8.8a1 1 0 0 1 .3-.8z"></path></svg>
+            <div style="width:4px;height:4px;border-radius:999px;background:#9B8DFF"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,245,.4)" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2.2"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="2.2"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="2.2"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="2.2"></rect></svg>
+            <div style="width:4px;height:4px"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,245,.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"></path></svg>
+            <div style="width:4px;height:4px"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,245,.4)" stroke-width="2" stroke-linecap="round"><path d="M3 7h5M13 7h8M3 17h11M19 17h2"></path><circle cx="10.5" cy="7" r="2.5"></circle><circle cx="16.5" cy="17" r="2.5"></circle></svg>
+            <div style="width:4px;height:4px"></div>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(250,248,245,.28)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N2</span><span style="font-size:15px;font-weight:500;color:#2A2733">Thư viện · cuộn được</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:-60px;top:420px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733;z-index:2"><span>9:41</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;overflow-y:auto;padding:71px 0 148px">
+          <div style="padding:0 20px;font-size:28px;font-weight:700;letter-spacing:-.42px;color:#2A2733">Thư viện</div>
+          <div style="margin-top:24px;padding:0 20px;display:flex;gap:8px;overflow-x:auto">
+            <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+              <div onClick="{{ c.pick }}" style="flex:0 0 auto;height:36px;padding:0 16px;border-radius:999px;display:flex;align-items:center;font-size:15px;font-weight:500;cursor:pointer;background:{{ c.bg }};color:{{ c.color }};border:1px solid {{ c.border }};">{{ c.label }}</div>
+            </sc-for>
+          </div>
+          <div style="margin-top:32px;padding:0 20px;font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Miễn phí · nhỏ 158×158</div>
+          <div style="margin-top:12px;display:flex;justify-content:center;gap:12px">
+            <div style="width:158px;height:158px;border-radius:22px;padding:16px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">1440</div>
+              <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#2A2733">{{ minsLeft }}</div>
+              <div style="font-size:13px;color:rgba(42,39,51,.6)">phút còn lại</div>
+            </div>
+            <div style="width:158px;height:158px;border-radius:22px;padding:16px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#9B8DFF">Đời</div>
+              <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#2A2733">{{ lifeDays }}</div>
+              <div style="font-size:13px;color:rgba(42,39,51,.6)">ngày còn lại</div>
+            </div>
+          </div>
+          <div style="margin-top:32px;padding:0 20px;font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Miễn phí · vừa 338×158</div>
+          <div style="margin-top:12px;display:flex;justify-content:center">
+            <div style="width:338px;height:158px;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;align-items:center;gap:20px">
+              <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+                <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#7FC8B8">Năm</div>
+                <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#2A2733">{{ yearDays }}</div>
+                <div style="font-size:13px;color:rgba(42,39,51,.6)">ngày còn lại của {{ yearNum }}</div>
+              </div>
+              <div style="flex:0 0 150px"><dc-import name="Illo" kind="dotgrid" filled="{{ yearFilled }}" style="width:150px" hint-size="150px,112px"></dc-import></div>
+            </div>
+          </div>
+          <div style="margin-top:32px;padding:0 20px;display:flex;align-items:center;gap:8px">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Đã khoá · lớn 338×354</span>
+          </div>
+          <div style="margin-top:12px;display:flex;justify-content:center">
+            <div style="position:relative;width:338px;height:354px;opacity:.55">
+              <div style="position:absolute;inset:0;border-radius:22px;padding:20px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06);display:flex;flex-direction:column;gap:16px">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start">
+                  <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#5B6ACF">Lịch âm · lớn</div>
+                  <div style="display:flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;background:rgba(42,39,51,.08)">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#2A2733" stroke-width="1.6" stroke-linecap="round"><rect x="2.5" y="5.2" width="7" height="5.3" rx="1.6"></rect><path d="M4.2 5.2V3.8a1.8 1.8 0 0 1 3.6 0v1.4"></path></svg>
+                    <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#2A2733">Khoá</span>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:2px">
+                  <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;color:#2A2733">{{ lunarLong }}</div>
+                  <div style="font-size:15px;font-weight:500;color:rgba(42,39,51,.6)">{{ canChiFull }}</div>
+                </div>
+                <dc-import name="Illo" kind="moonrow" style="width:100%" hint-size="100%,50px"></dc-import>
+                <div style="display:flex;gap:12px">
+                  <div style="flex:1;padding:14px;border-radius:16px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7)">
+                    <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Tiết khí</div>
+                    <div style="margin-top:4px;font-size:15px;font-weight:500;color:#2A2733">{{ tietKhi }}</div>
+                  </div>
+                  <div style="flex:1;padding:14px;border-radius:16px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7)">
+                    <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Giờ hoàng đạo</div>
+                    <div style="margin-top:4px;font-size:15px;font-weight:500;color:#2A2733">{{ hoangDaoShort }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:16px 20px 34px;background:#FCFBF9;border-top:1px solid rgba(42,39,51,.06)">
+          <div style="height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18)">Mở khoá 14 widget còn lại</div>
+        </div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N3</span><span style="font-size:15px;font-weight:500;color:#2A2733">Chi tiết widget</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:5px;top:280px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733"><span>9:41</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:67px;left:20px;right:20px;display:flex;align-items:center;justify-content:space-between;height:36px">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"></path></svg>
+          <span style="font-size:20px;font-weight:600;color:#2A2733">1440</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13V3M6.5 6.5 10 3l3.5 3.5M4 12v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4"></path></svg>
+        </div>
+        <div style="position:absolute;top:127px;left:20px;right:20px;height:44px;border-radius:18px;padding:4px;box-sizing:border-box;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;gap:4px">
+          <sc-for list="{{ sizeTabs }}" as="t" hint-placeholder-count="3">
+            <div onClick="{{ t.pick }}" style="flex:1;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;cursor:pointer;background:{{ t.bg }};color:{{ t.color }};box-shadow:{{ t.shadow }}">{{ t.label }}</div>
+          </sc-for>
+        </div>
+        <div style="position:absolute;top:196px;left:0;right:0;display:flex;justify-content:center">
+          <div style="position:relative;width:298px;height:560px;border-radius:38px;overflow:hidden;background:#EFEAF7;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+            <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.75) 0%,rgba(184,174,255,0) 70%);left:-40px;top:-40px"></div>
+            <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(232,168,124,.5) 0%,rgba(232,168,124,0) 70%);right:-80px;bottom:-40px"></div>
+            <div style="position:absolute;top:14px;left:0;right:0;display:flex;justify-content:space-between;padding:0 24px;font-size:11px;font-weight:600;color:rgba(42,39,51,.75)"><span>9:41</span><span>􀛨</span></div>
+            <div style="position:absolute;top:44px;left:0;right:0;text-align:center;font-size:11px;font-weight:600;color:rgba(42,39,51,.6)">Thứ Bảy, {{ dateShort }}</div>
+            <div style="position:absolute;top:64px;left:0;right:0;text-align:center;font-size:44px;font-weight:700;letter-spacing:-1px;color:#2A2733">9:41</div>
+            <div style="position:absolute;top:150px;left:26px;width:246px;height:{{ previewH }};border-radius:20px;padding:16px;box-sizing:border-box;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.1);display:flex;flex-direction:column;justify-content:space-between">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">1440</div>
+              <div style="display:flex;align-items:baseline;gap:8px">
+                <span style="font-size:40px;font-weight:700;letter-spacing:-.8px;font-variant-numeric:tabular-nums;line-height:1;color:#2A2733">{{ minsLeft }}</span>
+                <span style="font-size:13px;color:rgba(42,39,51,.6)">phút</span>
+              </div>
+              <div style="height:4px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="height:4px;border-radius:999px;background:#6B5CE7;width:{{ dayPct }}"></div></div>
+            </div>
+            <div style="position:absolute;bottom:96px;left:26px;right:26px;display:flex;justify-content:space-between">
+              <div style="width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.6)"></div>
+              <div style="width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.6)"></div>
+              <div style="width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.6)"></div>
+              <div style="width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.6)"></div>
+            </div>
+            <div style="position:absolute;bottom:20px;left:26px;right:26px;height:60px;border-radius:20px;background:rgba(255,255,255,.5);display:flex;align-items:center;justify-content:space-around;padding:0 8px">
+              <div style="width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.7)"></div>
+              <div style="width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.7)"></div>
+              <div style="width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.7)"></div>
+              <div style="width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.7)"></div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;top:716px;left:296px;width:40px">
+          <dc-import name="Nee" expression="thoughtful" phase="full" style="width:40px" hint-size="40px,46px"></dc-import>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18)">Tuỳ chỉnh widget này</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N4</span><span style="font-size:15px;font-weight:500;color:#2A2733">Trình sửa · điều khiển thật</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:5px;top:20px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733"><span>9:41</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:67px;left:20px;right:20px;display:flex;align-items:center;justify-content:space-between;height:36px">
+          <span style="font-size:15px;color:rgba(42,39,51,.6);cursor:pointer">Huỷ</span>
+          <span style="font-size:20px;font-weight:600;color:#2A2733">Tuỳ chỉnh</span>
+          <span style="font-size:15px;font-weight:600;color:#6B5CE7;cursor:pointer">Lưu</span>
+        </div>
+        <div style="position:absolute;top:127px;left:0;right:0;height:292px;display:flex;align-items:center;justify-content:center">
+          <div style="width:338px;height:158px;border-radius:{{ edRadius }};padding:20px;box-sizing:border-box;background:{{ edBg }};border:1px solid rgba(255,255,255,.9);box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07);display:flex;flex-direction:column;justify-content:space-between">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:{{ edColor }}">1440</div>
+            <div style="display:flex;align-items:baseline;gap:8px">
+              <span style="font-size:{{ edSize }};font-weight:700;letter-spacing:-1.28px;font-variant-numeric:tabular-nums;line-height:1;color:{{ edInk }}">{{ minsLeft }}</span>
+              <span style="font-size:15px;font-weight:500;color:{{ edInkSoft }}">phút còn lại</span>
+            </div>
+            <div style="height:6px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="height:6px;border-radius:999px;width:{{ dayPct }};background:{{ edColor }}"></div></div>
+          </div>
+        </div>
+        <div style="position:absolute;left:0;right:0;top:419px;bottom:0;border-radius:28px 28px 0 0;background:rgba(255,255,255,.96);border-top:1px solid rgba(42,39,51,.06);box-shadow:0 -4px 8px rgba(42,39,51,.04),0 -20px 48px rgba(42,39,51,.08);padding:20px 20px 34px;box-sizing:border-box;display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;gap:8px;overflow-x:auto">
+            <sc-for list="{{ tools }}" as="t" hint-placeholder-count="5">
+              <div onClick="{{ t.pick }}" style="flex:0 0 auto;height:36px;padding:0 16px;border-radius:999px;display:flex;align-items:center;font-size:15px;font-weight:500;cursor:pointer;background:{{ t.bg }};color:{{ t.color }};border:1px solid {{ t.border }}">{{ t.label }}</div>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ toolColor }}"><div style="display:flex;flex-direction:column;gap:16px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Màu nhấn</div>
+            <div style="display:flex;gap:12px">
+              <sc-for list="{{ swatches }}" as="s" hint-placeholder-count="6">
+                <div onClick="{{ s.pick }}" style="width:44px;height:44px;border-radius:999px;cursor:pointer;background:{{ s.color }};box-shadow:{{ s.ring }}"></div>
+              </sc-for>
+            </div>
+            <div style="font-size:13px;color:rgba(42,39,51,.6)">Một widget một màu. Màu nào cũng nhạt hơn màu nhấn của app một bậc.</div>
+          </div></sc-if>
+
+          <sc-if value="{{ toolType }}"><div style="display:flex;flex-direction:column;gap:16px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Cỡ số</div>
+            <div style="display:flex;gap:8px">
+              <sc-for list="{{ sizes }}" as="s" hint-placeholder-count="3">
+                <div onClick="{{ s.pick }}" style="flex:1;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;cursor:pointer;background:{{ s.bg }};color:{{ s.color }};border:1px solid {{ s.border }}">{{ s.label }}</div>
+              </sc-for>
+            </div>
+            <div style="font-size:13px;color:rgba(42,39,51,.6)">SF Pro Rounded, chữ số dạng tabular để số không nhảy khi đổi.</div>
+          </div></sc-if>
+
+          <sc-if value="{{ toolOpacity }}"><div style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Độ trong của kính</span>
+              <span style="font-size:15px;font-weight:500;font-variant-numeric:tabular-nums;color:#2A2733">{{ opacityLabel }}</span>
+            </div>
+            <div ref="{{ opRef }}" onPointerDown="{{ onOpacity }}" style="height:44px;display:flex;align-items:center;cursor:pointer;touch-action:none">
+              <div style="position:relative;width:100%;height:6px;border-radius:999px;background:rgba(42,39,51,.1)">
+                <div style="position:absolute;left:0;top:0;height:6px;border-radius:999px;background:#6B5CE7;width:{{ opacityPct }}"></div>
+                <div style="position:absolute;top:-13px;left:{{ opacityPct }};width:32px;height:32px;margin-left:-16px;border-radius:999px;background:#FFF6E5;border:2px solid rgba(61,58,70,.5);box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08)"></div>
+              </div>
+            </div>
+            <div style="font-size:13px;color:rgba(42,39,51,.6)">Kính mờ hơn thì chữ rõ hơn, nhưng hình nền mất đi một chút.</div>
+          </div></sc-if>
+
+          <sc-if value="{{ toolOther }}"><div style="display:flex;flex-direction:column;gap:12px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">{{ toolTitle }}</div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <sc-for list="{{ toolRows }}" as="r" hint-placeholder-count="3">
+                <div onClick="{{ r.pick }}" style="height:56px;border-radius:18px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;background:{{ r.bg }};border:1px solid {{ r.border }}">
+                  <span style="font-size:17px;color:#2A2733">{{ r.label }}</span>
+                  <sc-if value="{{ r.on }}"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#6B5CE7"></circle><path d="m6 10.4 2.6 2.6L14.2 7.4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div></sc-if>
+        </div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N5</span><span style="font-size:15px;font-weight:500;color:#2A2733">Lịch âm · tính thật</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:5px;top:60px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733"><span>9:41</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:71px;left:20px;right:20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">{{ solarLong }}</div>
+            <div style="font-size:64px;font-weight:700;letter-spacing:-1.28px;line-height:1.05;color:#2A2733">{{ lunarDayLabel }}</div>
+            <div style="font-size:20px;font-weight:600;color:rgba(42,39,51,.6)">{{ lunarMonthLabel }}</div>
+            <div style="margin-top:8px;font-size:15px;font-weight:500;color:#2A2733">{{ canChiFull }}</div>
+          </div>
+          <dc-import name="Nee" expression="{{ neePhaseMood }}" phase="{{ neePhase }}" style="width:80px;flex:0 0 80px" hint-size="80px,92px"></dc-import>
+        </div>
+        <div style="position:absolute;top:328px;left:20px;right:20px;padding:16px;border-radius:18px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);font-size:17px;line-height:1.45;color:#2A2733;text-wrap:pretty">{{ neeLine }}</div>
+        <div style="position:absolute;top:412px;left:0;right:0;display:flex;gap:8px;overflow-x:auto;padding:0 20px">
+          <sc-for list="{{ monthStrip }}" as="d" hint-placeholder-count="10">
+            <div style="flex:0 0 auto;width:52px;height:76px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:{{ d.bg }};border:1px solid {{ d.border }}">
+              <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:{{ d.dow }}">{{ d.dowLabel }}</span>
+              <span style="font-size:20px;font-weight:600;color:{{ d.ink }}">{{ d.solar }}</span>
+              <span style="font-size:11px;font-weight:600;color:{{ d.sub }}">{{ d.lunar }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="position:absolute;top:520px;left:20px;right:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="padding:20px;border-radius:22px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;gap:8px;min-height:120px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Tiết khí</div>
+            <div style="font-size:20px;font-weight:600;color:#2A2733">{{ tietKhi }}</div>
+            <div style="font-size:13px;color:rgba(42,39,51,.6)">{{ tietKhiNote }}</div>
+          </div>
+          <div style="padding:20px;border-radius:22px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;gap:8px;min-height:120px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Giờ hoàng đạo</div>
+            <div style="font-size:15px;line-height:1.45;font-weight:500;color:#2A2733">{{ hoangDao }}</div>
+          </div>
+          <div style="padding:20px;border-radius:22px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;gap:8px;min-height:120px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6BBF8A">Việc nên</div>
+            <div style="font-size:15px;line-height:1.45;color:#2A2733">Cầu phúc, gặp bạn cũ, dọn lại góc làm việc</div>
+          </div>
+          <div style="padding:20px;border-radius:22px;box-sizing:border-box;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;gap:8px;min-height:120px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#E07A6B">Việc không nên</div>
+            <div style="font-size:15px;line-height:1.45;color:#2A2733">Khai trương, ký kết lớn, đi đường xa</div>
+          </div>
+        </div>
+        <div style="position:absolute;left:24px;right:24px;bottom:34px;height:68px;border-radius:22px;background:rgba(255,255,255,.96);border-top:1px solid rgba(42,39,51,.06);box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07);display:flex;align-items:center">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(42,39,51,.38)" stroke-width="2" stroke-linejoin="round"><path d="M11.3 3.9a1 1 0 0 1 1.4 0l7.5 6.7a1 1 0 0 1 .3.7V20a1 1 0 0 1-1 1h-5v-6.5h-5V21H5a1 1 0 0 1-1-1v-8.7a1 1 0 0 1 .3-.7z"></path></svg><div style="width:4px;height:4px"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(42,39,51,.38)" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2.2"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="2.2"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="2.2"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="2.2"></rect></svg><div style="width:4px;height:4px"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 24 24" fill="#6B5CE7"><path d="M20.5 14.8A9 9 0 0 1 9.2 3.5a9 9 0 1 0 11.3 11.3z"></path></svg><div style="width:4px;height:4px;border-radius:999px;background:#6B5CE7"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(42,39,51,.38)" stroke-width="2" stroke-linecap="round"><path d="M3 7h5M13 7h8M3 17h11M19 17h2"></path><circle cx="10.5" cy="7" r="2.5"></circle><circle cx="16.5" cy="17" r="2.5"></circle></svg><div style="width:4px;height:4px"></div></div>
+        </div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N5·đêm</span><span style="font-size:15px;font-weight:500;color:#2A2733">Lịch âm, biến thể đêm</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#17161C;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:5px;top:60px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#FAF8F5"><span>23:04</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#FAF8F5"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:71px;left:20px;right:20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(250,248,245,.45)">{{ solarLong }}</div>
+            <div style="font-size:64px;font-weight:700;letter-spacing:-1.28px;line-height:1.05;color:#FAF8F5">{{ lunarDayLabel }}</div>
+            <div style="font-size:20px;font-weight:600;color:rgba(250,248,245,.6)">{{ lunarMonthLabel }}</div>
+            <div style="margin-top:8px;font-size:15px;font-weight:500;color:#FAF8F5">{{ canChiFull }}</div>
+          </div>
+          <dc-import name="Nee" expression="sleepy" phase="crescent" style="width:80px;flex:0 0 80px" hint-size="80px,92px"></dc-import>
+        </div>
+        <div style="position:absolute;top:328px;left:20px;right:20px;padding:16px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);font-size:17px;line-height:1.45;color:#FAF8F5;text-wrap:pretty">{{ neeLineNight }}</div>
+        <div style="position:absolute;top:412px;left:0;right:0;display:flex;gap:8px;overflow-x:auto;padding:0 20px">
+          <sc-for list="{{ monthStripNight }}" as="d" hint-placeholder-count="10">
+            <div style="flex:0 0 auto;width:52px;height:76px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:{{ d.bg }};border:1px solid {{ d.border }}">
+              <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:{{ d.dow }}">{{ d.dowLabel }}</span>
+              <span style="font-size:20px;font-weight:600;color:{{ d.ink }}">{{ d.solar }}</span>
+              <span style="font-size:11px;font-weight:600;color:{{ d.sub }}">{{ d.lunar }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="position:absolute;top:520px;left:20px;right:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="padding:20px;border-radius:22px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:8px;min-height:120px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(250,248,245,.45)">Tiết khí</div>
+            <div style="font-size:20px;font-weight:600;color:#FAF8F5">{{ tietKhi }}</div>
+            <div style="font-size:13px;color:rgba(250,248,245,.6)">{{ tietKhiNote }}</div>
+          </div>
+          <div style="padding:20px;border-radius:22px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:8px;min-height:120px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(250,248,245,.45)">Giờ hoàng đạo</div>
+            <div style="font-size:15px;line-height:1.45;font-weight:500;color:#FAF8F5">{{ hoangDao }}</div>
+          </div>
+          <div style="padding:20px;border-radius:22px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:8px;min-height:120px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6BBF8A">Việc nên</div>
+            <div style="font-size:15px;line-height:1.45;color:#FAF8F5">Cầu phúc, gặp bạn cũ, dọn lại góc làm việc</div>
+          </div>
+          <div style="padding:20px;border-radius:22px;box-sizing:border-box;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:8px;min-height:120px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#E07A6B">Việc không nên</div>
+            <div style="font-size:15px;line-height:1.45;color:#FAF8F5">Khai trương, ký kết lớn, đi đường xa</div>
+          </div>
+        </div>
+        <div style="position:absolute;left:24px;right:24px;bottom:34px;height:68px;border-radius:22px;background:rgba(255,255,255,.07);border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,245,.4)" stroke-width="2" stroke-linejoin="round"><path d="M11.3 3.9a1 1 0 0 1 1.4 0l7.5 6.7a1 1 0 0 1 .3.7V20a1 1 0 0 1-1 1h-5v-6.5h-5V21H5a1 1 0 0 1-1-1v-8.7a1 1 0 0 1 .3-.7z"></path></svg><div style="width:4px;height:4px"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,245,.4)" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="2.2"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="2.2"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="2.2"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="2.2"></rect></svg><div style="width:4px;height:4px"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 24 24" fill="#9B8DFF"><path d="M20.5 14.8A9 9 0 0 1 9.2 3.5a9 9 0 1 0 11.3 11.3z"></path></svg><div style="width:4px;height:4px;border-radius:999px;background:#9B8DFF"></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,245,.4)" stroke-width="2" stroke-linecap="round"><path d="M3 7h5M13 7h8M3 17h11M19 17h2"></path><circle cx="10.5" cy="7" r="2.5"></circle><circle cx="16.5" cy="17" r="2.5"></circle></svg><div style="width:4px;height:4px"></div></div>
+        </div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(250,248,245,.28)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N6</span><span style="font-size:15px;font-weight:500;color:#2A2733">Hướng dẫn thêm widget</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:5px;top:340px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733"><span>9:41</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:67px;left:20px;right:20px;display:flex;align-items:center;justify-content:space-between;height:36px">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"></path></svg>
+          <span style="font-size:20px;font-weight:600;color:#2A2733">Thêm vào màn hình</span>
+          <div style="width:20px"></div>
+        </div>
+        <div style="position:absolute;top:127px;left:20px;right:20px;display:flex;flex-direction:column;gap:12px">
+          <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;align-items:center;gap:20px">
+            <svg width="72" height="88" viewBox="0 0 72 88" style="flex:0 0 72px"><rect x="4" y="4" width="64" height="80" rx="14" fill="rgba(255,255,255,.6)" stroke="#3D3A46" stroke-opacity=".5" stroke-width="2"></rect><g fill="#3D3A46" fill-opacity=".16"><rect x="14" y="18" width="18" height="18" rx="6"></rect><rect x="40" y="18" width="18" height="18" rx="6"></rect><rect x="14" y="44" width="18" height="18" rx="6"></rect></g><rect x="40" y="44" width="18" height="18" rx="6" fill="#6B5CE7" fill-opacity=".2" stroke="#3D3A46" stroke-width="2" stroke-opacity=".5"></rect><circle cx="49" cy="53" r="9" fill="none" stroke="#6B5CE7" stroke-width="2"></circle><path d="M49 62v10" stroke="#3D3A46" stroke-width="2" stroke-linecap="round" stroke-opacity=".5"></path></svg>
+            <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">Bước 1</div>
+              <div style="font-size:17px;line-height:1.45;color:#2A2733;text-wrap:pretty">Nhấn giữ vào chỗ trống trên màn hình chính.</div>
+            </div>
+          </div>
+          <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;align-items:center;gap:20px">
+            <svg width="72" height="88" viewBox="0 0 72 88" style="flex:0 0 72px"><rect x="4" y="4" width="64" height="80" rx="14" fill="rgba(255,255,255,.6)" stroke="#3D3A46" stroke-opacity=".5" stroke-width="2"></rect><g fill="#3D3A46" fill-opacity=".16" transform="rotate(-4 36 44)"><rect x="14" y="24" width="18" height="18" rx="6"></rect><rect x="40" y="24" width="18" height="18" rx="6"></rect><rect x="14" y="50" width="18" height="18" rx="6"></rect><rect x="40" y="50" width="18" height="18" rx="6"></rect></g><circle cx="18" cy="14" r="9" fill="#6B5CE7"></circle><path d="M18 10.5v7M14.5 14h7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path></svg>
+            <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">Bước 2</div>
+              <div style="font-size:17px;line-height:1.45;color:#2A2733;text-wrap:pretty">Chọn dấu cộng ở góc trên bên trái.</div>
+            </div>
+          </div>
+          <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;align-items:center;gap:20px">
+            <svg width="72" height="88" viewBox="0 0 72 88" style="flex:0 0 72px"><rect x="4" y="4" width="64" height="80" rx="14" fill="rgba(255,255,255,.6)" stroke="#3D3A46" stroke-opacity=".5" stroke-width="2"></rect><rect x="14" y="16" width="44" height="16" rx="8" fill="none" stroke="#3D3A46" stroke-width="2" stroke-opacity=".5"></rect><circle cx="24" cy="24" r="4.5" fill="none" stroke="#6B5CE7" stroke-width="2"></circle><path d="M27.5 27.5 30 30" stroke="#6B5CE7" stroke-width="2" stroke-linecap="round"></path><rect x="34" y="21" width="20" height="6" rx="3" fill="#3D3A46" fill-opacity=".2"></rect><rect x="14" y="42" width="44" height="26" rx="8" fill="#6B5CE7" fill-opacity=".18" stroke="#3D3A46" stroke-width="2" stroke-opacity=".5"></rect></svg>
+            <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">Bước 3</div>
+              <div style="font-size:17px;line-height:1.45;color:#2A2733;text-wrap:pretty">Tìm “Needgets” rồi chọn cỡ bạn thích.</div>
+            </div>
+          </div>
+          <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;align-items:center;gap:20px">
+            <div style="flex:0 0 72px;display:flex;justify-content:center"><dc-import name="Nee" expression="encouraging" phase="full" style="width:72px" hint-size="72px,84px"></dc-import></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+              <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">Bước 4</div>
+              <div style="font-size:17px;line-height:1.45;color:#2A2733;text-wrap:pretty">Xong rồi. Dễ mà.</div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18)">Mình làm được rồi</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">N7</span><span style="font-size:15px;font-weight:500;color:#2A2733">Cài đặt</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:5px;top:200px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733"><span>9:41</span><svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg></div>
+        <div style="position:absolute;top:71px;left:20px;right:20px;font-size:28px;font-weight:700;letter-spacing:-.42px;color:#2A2733">Cài đặt</div>
+        <div style="position:absolute;top:135px;left:20px;right:20px;display:flex;flex-direction:column;gap:32px">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Tài khoản</div>
+            <div style="border-radius:18px;overflow:hidden;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05)">
+              <div style="height:60px;padding:0 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;border-radius:12px;background:rgba(107,92,231,.14);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#6B5CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2.5l2.3 4.7 5.2.8-3.7 3.7.8 5.2L10 14.5l-4.6 2.4.8-5.2L2.5 8l5.2-.8z"></path></svg></div>
+                <span style="flex:1;font-size:17px;color:#2A2733">Needgets Premium</span>
+                <span style="font-size:15px;font-weight:500;color:#6B5CE7">Nâng cấp</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-opacity=".38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5 13 10l-5.5 5.5"></path></svg>
+              </div>
+              <div style="height:1px;margin-left:60px;background:rgba(42,39,51,.06)"></div>
+              <div style="height:60px;padding:0 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;border-radius:12px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10a7 7 0 1 1 2.3 5.2M3 15v-4.5h4.5"></path></svg></div>
+                <span style="flex:1;font-size:17px;color:#2A2733">Khôi phục mua hàng</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-opacity=".38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5 13 10l-5.5 5.5"></path></svg>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Widget</div>
+            <div style="border-radius:18px;overflow:hidden;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05)">
+              <div style="height:60px;padding:0 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;border-radius:12px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a4.5 4.5 0 0 1 4.5 4.5c0 4 1.5 5 1.5 5H4s1.5-1 1.5-5A4.5 4.5 0 0 1 10 3zM8.3 16a1.8 1.8 0 0 0 3.4 0"></path></svg></div>
+                <span style="flex:1;font-size:17px;color:#2A2733">Nhắc nhở hằng ngày</span>
+                <span style="font-size:15px;color:rgba(42,39,51,.6)">21:00</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-opacity=".38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5 13 10l-5.5 5.5"></path></svg>
+              </div>
+              <div style="height:1px;margin-left:60px;background:rgba(42,39,51,.06)"></div>
+              <div style="height:60px;padding:0 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;border-radius:12px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 12A7 7 0 0 1 8 3.5 7 7 0 1 0 16.5 12z"></path></svg></div>
+                <span style="flex:1;font-size:17px;color:#2A2733">Giao diện</span>
+                <span style="font-size:15px;color:rgba(42,39,51,.6)">Theo hệ thống</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-opacity=".38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5 13 10l-5.5 5.5"></path></svg>
+              </div>
+              <div style="height:1px;margin-left:60px;background:rgba(42,39,51,.06)"></div>
+              <div style="height:60px;padding:0 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;border-radius:12px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="10" r="7.5"></circle><path d="M2.5 10h15M10 2.5c2 2.2 3 4.8 3 7.5s-1 5.3-3 7.5c-2-2.2-3-4.8-3-7.5s1-5.3 3-7.5z"></path></svg></div>
+                <span style="flex:1;font-size:17px;color:#2A2733">Ngôn ngữ</span>
+                <span style="font-size:15px;color:rgba(42,39,51,.6)">Tiếng Việt</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-opacity=".38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5 13 10l-5.5 5.5"></path></svg>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Khác</div>
+            <div style="border-radius:18px;overflow:hidden;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05)">
+              <div style="height:60px;padding:0 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;border-radius:12px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2.5h6.5L15 6v11.5H5z"></path><path d="M7.5 9.5h5M7.5 13h5"></path></svg></div>
+                <span style="flex:1;font-size:17px;color:#2A2733">Điều khoản &amp; quyền riêng tư</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-opacity=".38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5 13 10l-5.5 5.5"></path></svg>
+              </div>
+              <div style="height:1px;margin-left:60px;background:rgba(42,39,51,.06)"></div>
+              <div style="height:60px;padding:0 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;border-radius:12px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="15" height="11" rx="2.5"></rect><path d="m3.5 6 6.5 5 6.5-5"></path></svg></div>
+                <span style="flex:1;font-size:17px;color:#2A2733">Viết cho Nee</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-opacity=".38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5 13 10l-5.5 5.5"></path></svg>
+              </div>
+            </div>
+          </div>
+          <div style="font-size:13px;color:rgba(42,39,51,.38);text-align:center">Needgets 1.4.0 · Chỉ những widget bạn thật sự cần.</div>
+        </div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const CAN = ['Giáp','Ất','Bính','Đinh','Mậu','Kỷ','Canh','Tân','Nhâm','Quý'];
+const CHI = ['Tý','Sửu','Dần','Mão','Thìn','Tỵ','Ngọ','Mùi','Thân','Dậu','Tuất','Hợi'];
+const DOW = ['CN','T2','T3','T4','T5','T6','T7'];
+const TERMS = ['Xuân phân','Thanh minh','Cốc vũ','Lập hạ','Tiểu mãn','Mang chủng','Hạ chí','Tiểu thử','Đại thử','Lập thu','Xử thử','Bạch lộ','Thu phân','Hàn lộ','Sương giáng','Lập đông','Tiểu tuyết','Đại tuyết','Đông chí','Tiểu hàn','Đại hàn','Lập xuân','Vũ thủy','Kinh trập'];
+const TERM_NOTES = ['Ngày đêm bằng nhau','Trời trong, tiết sáng','Mưa cho mùa lúa','Hè bắt đầu','Lúa vào hạt','Mùa gặt tới','Ngày dài nhất','Nắng vừa lên','Nắng gắt nhất','Thu bắt đầu','Nắng đã dịu','Sương trắng đầu thu','Ngày đêm bằng nhau','Sương lạnh','Sương đã đọng','Đông bắt đầu','Tuyết nhẹ phương bắc','Tuyết dày phương bắc','Ngày ngắn nhất','Chớm lạnh sâu','Lạnh nhất năm','Xuân bắt đầu','Mưa xuân về','Sâu bọ thức giấc'];
+const HD = ['110100101100','001101001011','110011010010','101100110100','001011001101','010010110011'];
+const HOURS = ['Tý (23–1)','Sửu (1–3)','Dần (3–5)','Mão (5–7)','Thìn (7–9)','Tỵ (9–11)','Ngọ (11–13)','Mùi (13–15)','Thân (15–17)','Dậu (17–19)','Tuất (19–21)','Hợi (21–23)'];
+
+function jdFromDate(dd, mm, yy) {
+  const a = Math.floor((14 - mm) / 12), y = yy + 4800 - a, m = mm + 12 * a - 3;
+  let jd = dd + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400) - 32045;
+  if (jd < 2299161) jd = dd + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - 32083;
+  return jd;
+}
+function newMoon(k) {
+  const T = k / 1236.85, T2 = T * T, T3 = T2 * T, dr = Math.PI / 180;
+  let Jd1 = 2415020.75933 + 29.53058868 * k + 0.0001178 * T2 - 0.000000155 * T3;
+  Jd1 += 0.00033 * Math.sin((166.56 + 132.87 * T - 0.009173 * T2) * dr);
+  const M = 359.2242 + 29.10535608 * k - 0.0000333 * T2 - 0.00000347 * T3;
+  const Mpr = 306.0253 + 385.81691806 * k + 0.0107306 * T2 + 0.00001236 * T3;
+  const F = 21.2964 + 390.67050646 * k - 0.0016528 * T2 - 0.00000239 * T3;
+  let C1 = (0.1734 - 0.000393 * T) * Math.sin(M * dr) + 0.0021 * Math.sin(2 * dr * M);
+  C1 = C1 - 0.4068 * Math.sin(Mpr * dr) + 0.0161 * Math.sin(2 * dr * Mpr);
+  C1 = C1 - 0.0004 * Math.sin(3 * dr * Mpr);
+  C1 = C1 + 0.0104 * Math.sin(2 * dr * F) - 0.0051 * Math.sin((M + Mpr) * dr);
+  C1 = C1 - 0.0074 * Math.sin((M - Mpr) * dr) + 0.0004 * Math.sin((2 * F + M) * dr);
+  C1 = C1 - 0.0004 * Math.sin((2 * F - M) * dr) - 0.0006 * Math.sin((2 * F + Mpr) * dr);
+  C1 = C1 + 0.001 * Math.sin((2 * F - Mpr) * dr) + 0.0005 * Math.sin((2 * Mpr + M) * dr);
+  const deltat = T < -11
+    ? 0.001 + 0.000839 * T + 0.0002261 * T2 - 0.00000845 * T3 - 0.000000081 * T * T3
+    : -0.000278 + 0.000265 * T + 0.000262 * T2;
+  return Jd1 + C1 - deltat;
+}
+function sunLongitudeRad(jdn) {
+  const T = (jdn - 2451545.0) / 36525, T2 = T * T, dr = Math.PI / 180;
+  const M = 357.52910 + 35999.05030 * T - 0.0001559 * T2 - 0.00000048 * T * T2;
+  const L0 = 280.46645 + 36000.76983 * T + 0.0003032 * T2;
+  let DL = (1.914600 - 0.004817 * T - 0.000014 * T2) * Math.sin(dr * M);
+  DL += (0.019993 - 0.000101 * T) * Math.sin(dr * 2 * M) + 0.000290 * Math.sin(dr * 3 * M);
+  let L = (L0 + DL) * dr;
+  return L - Math.PI * 2 * Math.floor(L / (Math.PI * 2));
+}
+function sunLong12(dayNumber, tz) { return Math.floor(sunLongitudeRad(dayNumber - 0.5 - tz / 24) / Math.PI * 6); }
+function sunTerm24(dayNumber, tz) { return Math.floor(sunLongitudeRad(dayNumber - 0.5 - tz / 24) / Math.PI * 12); }
+function newMoonDay(k, tz) { return Math.floor(newMoon(k) + 0.5 + tz / 24); }
+function lunarMonth11(yy, tz) {
+  const off = jdFromDate(31, 12, yy) - 2415021;
+  const k = Math.floor(off / 29.530588853);
+  let nm = newMoonDay(k, tz);
+  if (sunLong12(nm, tz) >= 9) nm = newMoonDay(k - 1, tz);
+  return nm;
+}
+function leapMonthOffset(a11, tz) {
+  const k = Math.floor((a11 - 2415021.076998695) / 29.530588853 + 0.5);
+  let last = 0, i = 1, arc = sunLong12(newMoonDay(k + i, tz), tz);
+  do { last = arc; i++; arc = sunLong12(newMoonDay(k + i, tz), tz); } while (arc !== last && i < 14);
+  return i - 1;
+}
+function solar2lunar(dd, mm, yy) {
+  const tz = 7;
+  const dayNumber = jdFromDate(dd, mm, yy);
+  const k = Math.floor((dayNumber - 2415021.076998695) / 29.530588853);
+  let monthStart = newMoonDay(k + 1, tz);
+  if (monthStart > dayNumber) monthStart = newMoonDay(k, tz);
+  let a11 = lunarMonth11(yy, tz), b11 = a11, lunarYear;
+  if (a11 >= monthStart) { lunarYear = yy; a11 = lunarMonth11(yy - 1, tz); }
+  else { lunarYear = yy + 1; b11 = lunarMonth11(yy + 1, tz); }
+  const lunarDay = dayNumber - monthStart + 1;
+  const diff = Math.floor((monthStart - a11) / 29);
+  let leap = 0, lunarMonth = diff + 11;
+  if (b11 - a11 > 365) {
+    const lo = leapMonthOffset(a11, tz);
+    if (diff >= lo) { lunarMonth = diff + 10; if (diff === lo) leap = 1; }
+  }
+  if (lunarMonth > 12) lunarMonth -= 12;
+  if (lunarMonth >= 11 && diff < 4) lunarYear -= 1;
+  return { day: lunarDay, month: lunarMonth, year: lunarYear, leap, jd: dayNumber };
+}
+function phaseFor(d) {
+  if (d <= 3 || d >= 28) return 'crescent';
+  if (d <= 9) return 'half';
+  if (d <= 13) return 'gibbous';
+  if (d <= 17) return 'full';
+  if (d <= 21) return 'gibbous';
+  return 'half';
+}
+
+class Component extends DCLogic {
+  state = { now: new Date(), cat: 0, size: 1, tool: 0, edColorIdx: 0, edSizeIdx: 1, opacity: 0.72, edBgIdx: 0, edFxIdx: 0 };
+
+  componentDidMount() { this.timer = setInterval(() => this.setState({ now: new Date() }), 1000); }
+  componentWillUnmount() { clearInterval(this.timer); }
+  vn(n) { return Math.max(0, Math.round(n)).toLocaleString('vi-VN'); }
+
+  pillStyle(on) {
+    return {
+      bg: on ? '#6B5CE7' : 'rgba(255,255,255,.55)',
+      color: on ? '#FFFFFF' : 'rgba(42,39,51,.6)',
+      border: on ? '#6B5CE7' : 'rgba(255,255,255,.7)'
+    };
+  }
+
+  renderVals() {
+    const now = this.state.now;
+    const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const mins = (endOfDay - now) / 60000;
+    const dayFrac = (now - startOfDay) / (endOfDay - startOfDay);
+    const endOfYear = new Date(now.getFullYear() + 1, 0, 1);
+    const startOfYear = new Date(now.getFullYear(), 0, 1);
+    const yearDays = (endOfYear - now) / 86400000;
+    const yearElapsed = (now - startOfYear) / (endOfYear - startOfYear);
+    const death = new Date(1996 + 78, 7, 12);
+    const lifeDays = (death - now) / 86400000;
+
+    const L = solar2lunar(now.getDate(), now.getMonth() + 1, now.getFullYear());
+    const term = TERMS[((sunTerm24(L.jd + 1, 7) % 24) + 24) % 24];
+    const termNote = TERM_NOTES[((sunTerm24(L.jd + 1, 7) % 24) + 24) % 24];
+    const dayChi = (L.jd + 1) % 12;
+    const hdRow = HD[dayChi % 6];
+    const good = [];
+    for (let i = 0; i < 12; i++) if (hdRow[i] === '1') good.push(HOURS[i]);
+    const canChiDay = CAN[(L.jd + 9) % 10] + ' ' + CHI[dayChi];
+    const canChiYear = CAN[(L.year + 6) % 10] + ' ' + CHI[(L.year + 8) % 12];
+    const lunarPhase = phaseFor(L.day);
+    const lunarDayLabel = L.day <= 10 ? ('Mùng ' + L.day) : String(L.day);
+    const phaseWord = { crescent: 'Trăng còn mỏng lắm.', half: 'Trăng đã nửa vành.', gibbous: 'Trăng gần tròn rồi.', full: 'Trăng tròn đêm nay.' }[lunarPhase];
+
+    const strip = [];
+    for (let off = -3; off <= 10; off++) {
+      const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + off);
+      const l = solar2lunar(d.getDate(), d.getMonth() + 1, d.getFullYear());
+      const today = off === 0;
+      strip.push({
+        solar: d.getDate(), lunar: l.day === 1 ? l.month + '/' + l.day : String(l.day),
+        dowLabel: DOW[d.getDay()], today,
+        bg: today ? '#6B5CE7' : 'rgba(255,255,255,.55)',
+        border: today ? '#6B5CE7' : 'rgba(255,255,255,.7)',
+        ink: today ? '#FFFFFF' : '#2A2733',
+        dow: today ? 'rgba(255,255,255,.7)' : 'rgba(42,39,51,.38)',
+        sub: today ? 'rgba(255,255,255,.8)' : 'rgba(42,39,51,.38)'
+      });
+    }
+    const stripNight = strip.map((s) => Object.assign({}, s, {
+      bg: s.today ? '#9B8DFF' : 'rgba(255,255,255,.07)',
+      border: s.today ? '#9B8DFF' : 'rgba(255,255,255,.1)',
+      ink: s.today ? '#17161C' : '#FAF8F5',
+      dow: s.today ? 'rgba(23,22,28,.6)' : 'rgba(250,248,245,.45)',
+      sub: s.today ? 'rgba(23,22,28,.7)' : 'rgba(250,248,245,.45)'
+    }));
+
+    const catLabels = ['Tất cả', 'Thời gian', 'Tĩnh tâm', 'Lịch âm', 'Icon'];
+    const sizeLabels = ['Nhỏ', 'Vừa', 'Lớn'];
+    const toolLabels = ['Màu', 'Chữ', 'Độ trong', 'Nền', 'Hiệu ứng'];
+    const swatchColors = ['#6B5CE7', '#9B8DFF', '#7FC8B8', '#A8DCC8', '#E8A87C', '#5B6ACF'];
+    const edSizes = ['32', '40', '56'];
+    const bgRows = ['Kính trong', 'Kính đục', 'Kem của Nee'];
+    const fxRows = ['Không hiệu ứng', 'Số lật khi đổi', 'Vòng tiến trình chạy'];
+    const tool = this.state.tool;
+
+    return {
+      minsLeft: this.vn(mins),
+      yearDays: this.vn(yearDays),
+      lifeDays: this.vn(lifeDays),
+      yearNum: now.getFullYear(),
+      yearFilled: Math.round(yearElapsed * 91),
+      ringOffset: (590.6 * dayFrac).toFixed(1),
+      ringOffsetNight: (590.6 * 0.961).toFixed(1),
+      dayPct: (dayFrac * 100).toFixed(1) + '%',
+      dateShort: now.getDate() + '/' + (now.getMonth() + 1),
+      solarLong: 'Dương lịch ' + now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear(),
+      lunarDayLabel, lunarMonthLabel: 'tháng ' + L.month + (L.leap ? ' nhuận' : '') + ' âm',
+      lunarShort: lunarDayLabel + ' · tháng ' + L.month,
+      lunarLong: lunarDayLabel + ' tháng ' + L.month + ' âm',
+      canChiDay: 'Ngày ' + canChiDay,
+      canChiFull: 'Ngày ' + canChiDay + ' · năm ' + canChiYear,
+      tietKhi: term, tietKhiNote: termNote,
+      hoangDao: good.slice(0, 4).join(' · '),
+      hoangDaoShort: good.slice(0, 3).join(' · '),
+      monthStrip: strip,
+      monthStripNight: stripNight,
+      neePhase: lunarPhase,
+      neePhaseMood: lunarPhase === 'full' ? 'happy' : 'thoughtful',
+      neeLine: 'Hôm nay là ' + lunarDayLabel.toLowerCase() + '. ' + phaseWord,
+      neeLineNight: 'Khuya rồi. ' + phaseWord + ' Mình ngồi cùng bạn một lát.',
+
+      cats: catLabels.map((label, i) => Object.assign({ label, pick: () => this.setState({ cat: i }) }, this.pillStyle(this.state.cat === i))),
+      sizeTabs: sizeLabels.map((label, i) => ({
+        label, pick: () => this.setState({ size: i }),
+        bg: this.state.size === i ? 'rgba(255,255,255,.9)' : 'transparent',
+        color: this.state.size === i ? '#2A2733' : 'rgba(42,39,51,.6)',
+        shadow: this.state.size === i ? '0 1px 2px rgba(42,39,51,.05), 0 6px 16px rgba(42,39,51,.06)' : 'none'
+      })),
+      previewH: ['114px', '114px', '250px'][this.state.size],
+
+      tools: toolLabels.map((label, i) => Object.assign({ label, pick: () => this.setState({ tool: i }) }, this.pillStyle(tool === i))),
+      toolColor: tool === 0,
+      toolType: tool === 1,
+      toolOpacity: tool === 2,
+      toolOther: tool === 3 || tool === 4,
+      toolTitle: tool === 3 ? 'Nền của widget' : 'Hiệu ứng số',
+      toolRows: (tool === 3 ? bgRows : fxRows).map((label, i) => {
+        const on = (tool === 3 ? this.state.edBgIdx : this.state.edFxIdx) === i;
+        return {
+          label, on,
+          bg: on ? 'rgba(107,92,231,.06)' : 'rgba(255,255,255,.55)',
+          border: on ? '#6B5CE7' : 'rgba(255,255,255,.7)',
+          pick: () => this.setState(tool === 3 ? { edBgIdx: i } : { edFxIdx: i })
+        };
+      }),
+      swatches: swatchColors.map((color, i) => ({
+        color, pick: () => this.setState({ edColorIdx: i }),
+        ring: this.state.edColorIdx === i ? '0 0 0 3px #FAF8F5, 0 0 0 5px ' + color : '0 1px 2px rgba(42,39,51,.05)'
+      })),
+      sizes: edSizes.map((label, i) => ({
+        label: label + 'px', pick: () => this.setState({ edSizeIdx: i }),
+        bg: this.state.edSizeIdx === i ? 'rgba(107,92,231,.06)' : 'rgba(255,255,255,.55)',
+        color: '#2A2733',
+        border: this.state.edSizeIdx === i ? '#6B5CE7' : 'rgba(255,255,255,.7)'
+      })),
+      edColor: swatchColors[this.state.edColorIdx],
+      edSize: edSizes[this.state.edSizeIdx] + 'px',
+      edRadius: '22px',
+      edBg: this.state.edBgIdx === 2 ? 'rgba(255,246,229,.9)' : 'rgba(255,255,255,' + this.state.opacity.toFixed(2) + ')',
+      edInk: '#2A2733',
+      edInkSoft: 'rgba(42,39,51,.6)',
+      opacityPct: (((this.state.opacity - 0.3) / 0.65) * 100).toFixed(1) + '%',
+      opacityLabel: Math.round(this.state.opacity * 100) + '%',
+      opRef: (el) => { this.opEl = el; },
+      onOpacity: (e) => {
+        const set = (ev) => {
+          if (!this.opEl) return;
+          const r = this.opEl.getBoundingClientRect();
+          const p = Math.min(1, Math.max(0, (ev.clientX - r.left) / r.width));
+          this.setState({ opacity: 0.3 + p * 0.65 });
+        };
+        set(e);
+        const up = () => { window.removeEventListener('pointermove', set); window.removeEventListener('pointerup', up); };
+        window.addEventListener('pointermove', set);
+        window.addEventListener('pointerup', up);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

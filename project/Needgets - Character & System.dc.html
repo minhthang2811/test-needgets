@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><style>
+body{margin:0;background:#EDEAE4;font-family:ui-rounded,"SF Pro Rounded",-apple-system,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#6B5CE7;text-decoration:none}a:hover{color:#5849c9}
+</style></helmet>
+
+<div style="padding:56px 56px 80px;display:flex;flex-direction:column;gap:56px;width:1520px">
+
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Needgets · Bảng nhân vật &amp; hệ thống</div>
+    <div style="font-size:40px;font-weight:700;letter-spacing:-.6px;color:#2A2733">Nee, và cái sân khấu yên tĩnh cho Nee</div>
+    <div style="font-size:17px;line-height:1.45;color:rgba(42,39,51,.6);max-width:680px;text-wrap:pretty">Nhân vật được vẽ trọn vẹn trước khi vẽ màn hình: bảy biểu cảm, bốn pha trăng, sáu phụ kiện. Mọi nét là 2px, màu xám ấm #3D3A46, không góc nhọn ở đâu cả.</div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(42,39,51,.1)">
+      <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">A</span>
+      <span style="font-size:20px;font-weight:600;color:#2A2733">Biểu cảm — bảy trạng thái</span>
+      <span style="font-size:13px;color:rgba(42,39,51,.38)">Không mũi, không mày. Chỉ mắt và miệng.</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px">
+      <div style="width:184px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);border-left-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="neutral" style="width:118px" hint-size="118px,136px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Bình thường</div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Mắt tròn, miệng cong nhẹ</div>
+      </div>
+      <div style="width:184px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);border-left-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="happy" style="width:118px" hint-size="118px,136px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Vui</div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Mắt vòng cung, miệng hé</div>
+      </div>
+      <div style="width:184px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);border-left-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="curious" style="width:118px" hint-size="118px,136px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Tò mò</div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Một mắt to hơn, nghiêng 8°</div>
+      </div>
+      <div style="width:184px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);border-left-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="sleepy" style="width:118px" hint-size="118px,136px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Buồn ngủ</div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Mắt lim dim, một chữ “z”</div>
+      </div>
+      <div style="width:184px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);border-left-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="encouraging" style="width:118px" hint-size="118px,136px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Khích lệ</div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Mắt nhắm, hai tay đưa lên</div>
+      </div>
+      <div style="width:184px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);border-left-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="thoughtful" style="width:118px" hint-size="118px,136px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Nghĩ ngợi</div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Mắt nhìn lên phải, miệng thẳng</div>
+      </div>
+      <div style="width:184px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);border-left-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="celebrating" style="width:118px" hint-size="118px,136px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Ăn mừng</div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Mắt hình sao, tay mở rộng</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(42,39,51,.1)">
+      <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">B</span>
+      <span style="font-size:20px;font-weight:600;color:#2A2733">Pha trăng — trục cảm xúc thứ hai</span>
+      <span style="font-size:13px;color:rgba(42,39,51,.38)">Tròn = hiện diện. Khuyết = nghỉ ngơi.</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end">
+      <div style="width:200px;padding:20px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="happy" phase="full" style="width:132px" hint-size="132px,152px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Tròn</div>
+      </div>
+      <div style="width:200px;padding:20px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="neutral" phase="gibbous" style="width:132px" hint-size="132px,152px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Khuyết nhẹ</div>
+      </div>
+      <div style="width:200px;padding:20px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="thoughtful" phase="half" style="width:132px" hint-size="132px,152px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Bán nguyệt</div>
+      </div>
+      <div style="width:200px;padding:20px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="sleepy" phase="crescent" style="width:132px" hint-size="132px,152px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#2A2733">Lưỡi liềm</div>
+      </div>
+      <div style="width:236px;padding:20px;border-radius:22px;background:#17161C;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <dc-import name="Nee" expression="sleepy" phase="crescent" style="width:132px" hint-size="132px,152px"></dc-import>
+        <div style="font-size:15px;font-weight:500;color:#FAF8F5">Chế độ đêm</div>
+        <div style="font-size:13px;color:rgba(250,248,245,.55);text-align:center">Lưỡi liềm + mắt lim dim</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(42,39,51,.1)">
+      <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">C</span>
+      <span style="font-size:20px;font-weight:600;color:#2A2733">Phụ kiện — mỗi lần một món</span>
+      <span style="font-size:13px;color:rgba(42,39,51,.38)">Nee cầm bằng tay, không bao giờ mặc lên người.</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px">
+      <div style="width:160px;padding:16px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:8px">
+        <dc-import name="Nee" expression="neutral" accessory="hourglass" style="width:112px" hint-size="112px,130px"></dc-import>
+        <div style="font-size:13px;color:rgba(42,39,51,.6)">Đồng hồ cát</div>
+      </div>
+      <div style="width:160px;padding:16px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:8px">
+        <dc-import name="Nee" expression="neutral" accessory="lantern" style="width:112px" hint-size="112px,130px"></dc-import>
+        <div style="font-size:13px;color:rgba(42,39,51,.6)">Đèn giấy</div>
+      </div>
+      <div style="width:160px;padding:16px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:8px">
+        <dc-import name="Nee" expression="thoughtful" accessory="incense" style="width:112px" hint-size="112px,130px"></dc-import>
+        <div style="font-size:13px;color:rgba(42,39,51,.6)">Nén nhang</div>
+      </div>
+      <div style="width:160px;padding:16px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:8px">
+        <dc-import name="Nee" expression="sleepy" accessory="teacup" style="width:112px" hint-size="112px,130px"></dc-import>
+        <div style="font-size:13px;color:rgba(42,39,51,.6)">Chén trà</div>
+      </div>
+      <div style="width:160px;padding:16px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:8px">
+        <dc-import name="Nee" expression="happy" accessory="envelope" style="width:112px" hint-size="112px,130px"></dc-import>
+        <div style="font-size:13px;color:rgba(42,39,51,.6)">Bao đỏ</div>
+      </div>
+      <div style="width:160px;padding:16px;border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;gap:8px">
+        <dc-import name="Nee" expression="curious" accessory="blossom" style="width:112px" hint-size="112px,130px"></dc-import>
+        <div style="font-size:13px;color:rgba(42,39,51,.6)">Cành mai</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(42,39,51,.1)">
+      <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">D</span>
+      <span style="font-size:20px;font-weight:600;color:#2A2733">Bộ minh hoạ — bảy hình, một ngôn ngữ</span>
+      <span style="font-size:13px;color:rgba(42,39,51,.38)">Nét 2px, tối đa 3 màu mỗi hình, cao nhất 180px.</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
+      <div style="width:196px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="height:168px;display:flex;align-items:flex-end"><dc-import name="Illo" kind="hourglass" style="width:106px" hint-size="106px,168px"></dc-import></div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Đồng hồ cát · 1440</div>
+      </div>
+      <div style="width:250px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="height:168px;display:flex;align-items:center"><dc-import name="Illo" kind="dotgrid" style="width:210px" hint-size="210px,158px"></dc-import></div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Lưới ngày · Năm</div>
+      </div>
+      <div style="width:270px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="height:168px;display:flex;align-items:center"><dc-import name="Illo" kind="moonrow" style="width:230px" hint-size="230px,50px"></dc-import></div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Dãy pha trăng · Lịch âm</div>
+      </div>
+      <div style="width:250px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="height:168px;display:flex;align-items:center"><dc-import name="Illo" kind="boat" style="width:206px" hint-size="206px,138px"></dc-import></div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Thả thuyền giấy · Đời</div>
+      </div>
+      <div style="width:196px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="height:168px;display:flex;align-items:center"><dc-import name="Illo" kind="emptyframe" style="width:158px" hint-size="158px,158px"></dc-import></div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Khung trống · Empty</div>
+      </div>
+      <div style="width:196px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="height:168px;display:flex;align-items:center"><dc-import name="Illo" kind="homescreen" style="width:118px" hint-size="118px,166px"></dc-import></div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Màn hình chính · Hướng dẫn</div>
+      </div>
+      <div style="width:216px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="height:168px;display:flex;align-items:center"><dc-import name="Illo" kind="cloud" style="width:176px" hint-size="176px,140px"></dc-import></div>
+        <div style="font-size:13px;color:rgba(42,39,51,.6);text-align:center">Mây một hạt mưa · Lỗi</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(42,39,51,.1)">
+      <span style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:#6B5CE7">E</span>
+      <span style="font-size:20px;font-weight:600;color:#2A2733">Bảng thành phần</span>
+      <span style="font-size:13px;color:rgba(42,39,51,.38)">Kính, bóng đổ, chữ, màu.</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+
+      <div style="width:340px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Ba bậc kính · thông số cho iOS</div>
+        <div style="font-size:13px;line-height:1.45;color:rgba(42,39,51,.6);text-wrap:pretty">Bản mô phỏng web dựng độ mờ bằng lớp trắng phẳng; trên iOS dùng UIBlurEffect với đúng thông số blur/saturate ghi dưới đây.</div>
+        <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);border-left-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1)">
+          <div style="font-size:15px;font-weight:500;color:#2A2733">GLASS-1 · thẻ</div>
+          <div style="font-size:13px;color:rgba(42,39,51,.6);margin-top:4px">white 72% · blur 28 · sat 140%</div>
+          <div style="margin-top:16px;padding:14px;border-radius:16px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7)">
+            <div style="font-size:15px;font-weight:500;color:#2A2733">GLASS-2 · hàng lồng, chip</div>
+            <div style="font-size:13px;color:rgba(42,39,51,.6);margin-top:4px">white 55% · blur 16</div>
+          </div>
+        </div>
+        <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.96);border-top:1px solid rgba(42,39,51,.06)">
+          <div style="font-size:15px;font-weight:500;color:#2A2733">GLASS-3 · tab bar, sheet</div>
+          <div style="font-size:13px;color:rgba(42,39,51,.6);margin-top:4px">white 82% · blur 40 · sat 160%</div>
+        </div>
+      </div>
+
+      <div style="width:300px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Ba bậc bóng đổ</div>
+        <div style="height:76px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.6);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;align-items:center;padding:0 20px;font-size:15px;font-weight:500;color:#2A2733">Resting</div>
+        <div style="height:76px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.6);box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07);display:flex;align-items:center;padding:0 20px;font-size:15px;font-weight:500;color:#2A2733">Raised</div>
+        <div style="height:76px;border-radius:22px;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.6);box-shadow:0 4px 8px rgba(42,39,51,.08),0 20px 48px rgba(42,39,51,.12),0 56px 120px rgba(42,39,51,.1);display:flex;align-items:center;padding:0 20px;font-size:15px;font-weight:500;color:#2A2733">Modal</div>
+      </div>
+
+      <div style="width:360px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Thang chữ · SF Pro Rounded</div>
+        <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:64px;font-weight:700;letter-spacing:-1.28px;font-variant-numeric:tabular-nums;color:#2A2733;line-height:1">842</div>
+          <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;color:#2A2733">H1 · Chào Minh</div>
+          <div style="font-size:20px;font-weight:600;color:#2A2733">H2 · Widget của bạn</div>
+          <div style="font-size:17px;line-height:1.45;color:#2A2733">Body · Mình sẽ giúp bạn để mắt tới thời gian.</div>
+          <div style="font-size:15px;font-weight:500;color:rgba(42,39,51,.6)">Label · Ngày sinh</div>
+          <div style="font-size:13px;color:rgba(42,39,51,.6)">Caption · Huỷ bất cứ lúc nào</div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Micro · miễn phí</div>
+        </div>
+      </div>
+
+      <div style="width:340px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Màu</div>
+        <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:14px;background:#6B5CE7"></div>
+            <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:500;color:#2A2733">Accent</span><span style="font-size:13px;color:rgba(42,39,51,.6)">#6B5CE7 — màu bão hoà duy nhất</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:14px;background:#FAF8F5;border:1px solid rgba(42,39,51,.1)"></div>
+            <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:500;color:#2A2733">Canvas</span><span style="font-size:13px;color:rgba(42,39,51,.6)">#FAF8F5 · đêm #17161C</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:14px;background:#FFF6E5;border:1px solid rgba(61,58,70,.35)"></div>
+            <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:500;color:#2A2733">Cream của Nee</span><span style="font-size:13px;color:rgba(42,39,51,.6)">#FFF6E5 — không dùng cho UI</span></div>
+          </div>
+          <div style="height:1px;background:rgba(42,39,51,.08)"></div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Tint họ widget · chỉ trong preview</div>
+          <div style="display:flex;gap:8px">
+            <div style="flex:1;height:36px;border-radius:12px;background:#6B5CE7"></div>
+            <div style="flex:1;height:36px;border-radius:12px;background:#9B8DFF"></div>
+            <div style="flex:1;height:36px;border-radius:12px;background:#7FC8B8"></div>
+            <div style="flex:1;height:36px;border-radius:12px;background:#A8DCC8"></div>
+            <div style="flex:1;height:36px;border-radius:12px;background:#E8A87C"></div>
+            <div style="flex:1;height:36px;border-radius:12px;background:#5B6ACF"></div>
+          </div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Ngữ nghĩa</div>
+          <div style="display:flex;gap:8px">
+            <div style="flex:1;height:36px;border-radius:12px;background:#6BBF8A"></div>
+            <div style="flex:1;height:36px;border-radius:12px;background:#E8B04B"></div>
+            <div style="flex:1;height:36px;border-radius:12px;background:#E07A6B"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:340px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Bán kính &amp; khoảng cách</div>
+        <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.95);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:12px;align-items:flex-end">
+            <div style="width:64px;height:64px;border-radius:28px;background:rgba(107,92,231,.14);display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px;font-size:11px;font-weight:600;color:#6B5CE7">28</div>
+            <div style="width:56px;height:56px;border-radius:22px;background:rgba(107,92,231,.14);display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px;font-size:11px;font-weight:600;color:#6B5CE7">22</div>
+            <div style="width:48px;height:48px;border-radius:18px;background:rgba(107,92,231,.14);display:flex;align-items:flex-end;justify-content:center;padding-bottom:5px;font-size:11px;font-weight:600;color:#6B5CE7">18</div>
+            <div style="width:40px;height:40px;border-radius:14px;background:rgba(107,92,231,.14);display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;font-size:11px;font-weight:600;color:#6B5CE7">14</div>
+            <div style="width:56px;height:32px;border-radius:999px;background:rgba(107,92,231,.14);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#6B5CE7">999</div>
+          </div>
+          <div style="height:1px;background:rgba(42,39,51,.08)"></div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:12px"><div style="height:8px;width:4px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:8px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:12px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:16px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:20px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:24px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:32px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:40px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:56px;background:#6B5CE7;border-radius:2px"></div><div style="height:8px;width:72px;background:#6B5CE7;border-radius:2px"></div></div>
+            <div style="font-size:13px;color:rgba(42,39,51,.6)">Thang 4pt · 4 8 12 16 20 24 32 40 56 72. Không có giá trị ngoài thang.</div>
+          </div>
+          <div style="height:1px;background:rgba(42,39,51,.08)"></div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Vị trí cố định của Nee</div>
+            <div style="font-size:13px;line-height:1.5;color:rgba(42,39,51,.6);text-wrap:pretty">Cách lề trái 20px · thẳng đỉnh bong bóng thoại · ngay dưới thanh tiến trình · bong bóng cách 12px bên phải, đuôi trỏ về Nee. Nee không đổi chỗ giữa các bước onboarding.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

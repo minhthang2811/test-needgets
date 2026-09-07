@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><style>
+body{margin:0;background:#EDEAE4;font-family:ui-rounded,"SF Pro Rounded",-apple-system,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#6B5CE7;text-decoration:none}a:hover{color:#5849c9}
+input{font-family:inherit}
+@keyframes ngRise{0%{opacity:0;transform:translateY(32px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes ngSpark{0%{opacity:0;transform:scale(.4)}40%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.7);filter:blur(4px)}}
+@keyframes ngBubble{0%{opacity:0;transform:scale(.9)}100%{opacity:1;transform:scale(1)}}
+</style></helmet>
+
+<div style="padding:56px 56px 80px;display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="font-size:11px;font-weight:600;letter-spacing:.66px;text-transform:uppercase;color:rgba(42,39,51,.38)">Needgets · Phần 1</div>
+    <div style="font-size:40px;font-weight:700;letter-spacing:-.6px;color:#2A2733">Onboarding · 8 màn hình</div>
+    <div style="font-size:17px;line-height:1.45;color:rgba(42,39,51,.6);max-width:720px;text-wrap:pretty">Nee giữ đúng một vị trí từ O3 đến O7: cách lề trái 20px, ngay dưới thanh tiến trình. Chỉ bong bóng thoại đổi. Các trường ở đây hoạt động thật — thử nhập tên, chọn ngày sinh, kéo thanh tuổi, chọn chip.</div>
+  </div>
+
+  <div style="width:1840px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">O1</span><span style="font-size:15px;font-weight:500;color:#2A2733">Splash</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:5px;top:256px"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px">
+          <dc-import name="Nee" expression="neutral" phase="full" style="width:200px" hint-size="200px,230px"></dc-import>
+          <div style="font-size:24px;font-weight:600;letter-spacing:-.3px;color:#2A2733">Needgets</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">O2</span><span style="font-size:15px;font-weight:500;color:#2A2733">Gặp Nee</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:0;top:320px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733">
+          <span>9:41</span>
+          <svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg>
+        </div>
+        <div style="position:absolute;top:63px;left:20px;right:20px;display:flex;align-items:center;gap:12px;height:40px">
+          <div style="width:20px;height:20px;opacity:0"></div>
+          <div style="flex:1;height:3px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="width:14.3%;height:3px;border-radius:999px;background:#6B5CE7"></div></div>
+          <span style="font-size:15px;color:rgba(42,39,51,.6)">Bỏ qua</span>
+        </div>
+        <div style="position:absolute;top:168px;left:20px;right:20px;display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:28px;font-weight:700;letter-spacing:-.42px;color:#2A2733">Chào bạn, mình là Nee.</div>
+          <div style="font-size:17px;line-height:1.45;color:rgba(42,39,51,.6);text-wrap:pretty">Mình sẽ giúp bạn để mắt tới thời gian.</div>
+        </div>
+        <div style="position:absolute;top:376px;left:0;right:0;display:flex;justify-content:center">
+          <dc-import name="Nee" expression="happy" phase="full" arms="oneUp" style="width:160px" hint-size="160px,184px"></dc-import>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18)">Chào Nee</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">O3</span><span style="font-size:15px;font-weight:500;color:#2A2733">Ý tưởng 1440</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:60px;top:360px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733">
+          <span>9:41</span>
+          <svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg>
+        </div>
+        <div style="position:absolute;top:63px;left:20px;right:20px;display:flex;align-items:center;gap:12px;height:40px">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"></path></svg>
+          <div style="flex:1;height:3px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="width:28.6%;height:3px;border-radius:999px;background:#6B5CE7"></div></div>
+          <span style="font-size:15px;color:rgba(42,39,51,.6)">Bỏ qua</span>
+        </div>
+        <div style="position:absolute;top:115px;left:20px;right:20px;display:flex;align-items:flex-start;gap:12px">
+          <dc-import name="Nee" expression="neutral" phase="full" style="width:96px;flex:0 0 96px;position:relative;z-index:2" hint-size="96px,110px"></dc-import>
+          <div style="position:relative;flex:1;margin-top:6px;padding:16px;border-radius:18px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05);animation:ngBubble .3s cubic-bezier(.32,.72,0,1) both">
+            <div style="position:absolute;left:-5px;top:20px;width:12px;height:12px;background:rgba(255,255,255,.68);border-left:1px solid rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.7);transform:rotate(45deg);border-radius:2px"></div>
+            <div style="position:relative;font-size:17px;line-height:1.45;color:#2A2733">Một ngày có 1440 phút.</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:328px;left:20px;right:20px;display:flex;flex-direction:column;align-items:center;gap:32px">
+          <dc-import name="Illo" kind="hourglass" style="width:106px" hint-size="106px,168px"></dc-import>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+            <div style="font-size:64px;font-weight:700;letter-spacing:-1.28px;font-variant-numeric:tabular-nums;line-height:1;color:#2A2733">{{ minsLeft }}</div>
+            <div style="font-size:15px;font-weight:500;color:rgba(42,39,51,.6)">phút còn lại hôm nay</div>
+          </div>
+          <div style="font-size:17px;line-height:1.45;color:rgba(42,39,51,.6);text-align:center">Mình đếm giúp bạn nhé?</div>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18)">Ừ, đếm giúp mình</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">O4</span><span style="font-size:15px;font-weight:500;color:#2A2733">Tên · nhập thật</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:-40px;top:180px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733">
+          <span>9:41</span>
+          <svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg>
+        </div>
+        <div style="position:absolute;top:63px;left:20px;right:20px;display:flex;align-items:center;gap:12px;height:40px">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"></path></svg>
+          <div style="flex:1;height:3px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="width:42.9%;height:3px;border-radius:999px;background:#6B5CE7"></div></div>
+          <span style="font-size:15px;color:rgba(42,39,51,.6)">Bỏ qua</span>
+        </div>
+        <div style="position:absolute;top:115px;left:20px;right:20px;display:flex;align-items:flex-start;gap:12px">
+          <dc-import name="Nee" expression="curious" phase="full" style="width:96px;flex:0 0 96px;position:relative;z-index:2" hint-size="96px,110px"></dc-import>
+          <div style="position:relative;flex:1;margin-top:6px;padding:16px;border-radius:18px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05)">
+            <div style="position:absolute;left:-5px;top:20px;width:12px;height:12px;background:rgba(255,255,255,.68);border-left:1px solid rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.7);transform:rotate(45deg);border-radius:2px"></div>
+            <div style="position:relative;font-size:17px;line-height:1.45;color:#2A2733">Mình gọi bạn là gì?</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:300px;left:20px;right:20px">
+          <input value="{{ name }}" onInput="{{ onName }}" placeholder="Tên của bạn" style="width:100%;box-sizing:border-box;height:72px;padding:0 20px;border-radius:22px;border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);background:rgba(255,255,255,.72);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);font-size:20px;font-weight:600;color:#2A2733;outline:none">
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18);opacity:{{ nameOpacity }}">Tiếp tục</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">O5</span><span style="font-size:15px;font-weight:500;color:#2A2733">Ngày sinh · chọn thật</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:80px;top:420px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733">
+          <span>9:41</span>
+          <svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg>
+        </div>
+        <div style="position:absolute;top:63px;left:20px;right:20px;display:flex;align-items:center;gap:12px;height:40px">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"></path></svg>
+          <div style="flex:1;height:3px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="width:57.2%;height:3px;border-radius:999px;background:#6B5CE7"></div></div>
+          <span style="font-size:15px;color:rgba(42,39,51,.6)">Bỏ qua</span>
+        </div>
+        <div style="position:absolute;top:115px;left:20px;right:20px;display:flex;align-items:flex-start;gap:12px">
+          <dc-import name="Nee" expression="neutral" phase="full" style="width:96px;flex:0 0 96px;position:relative;z-index:2" hint-size="96px,110px"></dc-import>
+          <div style="position:relative;flex:1;margin-top:6px;padding:16px;border-radius:18px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05)">
+            <div style="position:absolute;left:-5px;top:20px;width:12px;height:12px;background:rgba(255,255,255,.68);border-left:1px solid rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.7);transform:rotate(45deg);border-radius:2px"></div>
+            <div style="position:relative;font-size:17px;line-height:1.45;color:#2A2733">Bạn sinh ngày nào? Mình hỏi để tính giúp thôi.</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:296px;left:20px;right:20px;padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1)">
+          <div style="display:flex;gap:12px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+              <sc-for list="{{ dayRows }}" as="r" hint-placeholder-count="5">
+                <div onClick="{{ r.pick }}" style="height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:{{ r.weight }};color:{{ r.color }};background:{{ r.bg }};box-shadow:{{ r.shadow }};border-bottom:{{ r.rule }};cursor:pointer">{{ r.label }}</div>
+              </sc-for>
+            </div>
+            <div style="flex:1.3;display:flex;flex-direction:column;gap:4px">
+              <sc-for list="{{ monthRows }}" as="r" hint-placeholder-count="5">
+                <div onClick="{{ r.pick }}" style="height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:{{ r.weight }};color:{{ r.color }};background:{{ r.bg }};box-shadow:{{ r.shadow }};border-bottom:{{ r.rule }};cursor:pointer">{{ r.label }}</div>
+              </sc-for>
+            </div>
+            <div style="flex:1.1;display:flex;flex-direction:column;gap:4px">
+              <sc-for list="{{ yearRows }}" as="r" hint-placeholder-count="5">
+                <div onClick="{{ r.pick }}" style="height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:{{ r.weight }};color:{{ r.color }};background:{{ r.bg }};box-shadow:{{ r.shadow }};border-bottom:{{ r.rule }};cursor:pointer">{{ r.label }}</div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18)">Tiếp tục</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">O6</span><span style="font-size:15px;font-weight:500;color:#2A2733">Tuổi thọ · kéo thật</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:20px;top:300px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733">
+          <span>9:41</span>
+          <svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg>
+        </div>
+        <div style="position:absolute;top:63px;left:20px;right:20px;display:flex;align-items:center;gap:12px;height:40px">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"></path></svg>
+          <div style="flex:1;height:3px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="width:71.5%;height:3px;border-radius:999px;background:#6B5CE7"></div></div>
+          <span style="font-size:15px;color:rgba(42,39,51,.6)">Bỏ qua</span>
+        </div>
+        <div style="position:absolute;top:115px;left:20px;right:20px;display:flex;align-items:flex-start;gap:12px">
+          <dc-import name="Nee" expression="thoughtful" phase="full" style="width:96px;flex:0 0 96px;position:relative;z-index:2" hint-size="96px,110px"></dc-import>
+          <div style="position:relative;flex:1;margin-top:6px;padding:16px;border-radius:18px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05)">
+            <div style="position:absolute;left:-5px;top:20px;width:12px;height:12px;background:rgba(255,255,255,.68);border-left:1px solid rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.7);transform:rotate(45deg);border-radius:2px"></div>
+            <div style="position:relative;font-size:17px;line-height:1.45;color:#2A2733">Bạn muốn sống tới bao nhiêu tuổi?</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:308px;left:20px;right:20px;display:flex;flex-direction:column;align-items:center;gap:40px">
+          <div style="display:flex;align-items:baseline;gap:8px">
+            <span style="font-size:64px;font-weight:700;letter-spacing:-1.28px;font-variant-numeric:tabular-nums;line-height:1;color:#2A2733">{{ age }}</span>
+            <span style="font-size:20px;font-weight:600;color:rgba(42,39,51,.38)">tuổi</span>
+          </div>
+          <div ref="{{ sliderRef }}" onPointerDown="{{ onSlide }}" style="width:100%;height:44px;display:flex;align-items:center;cursor:pointer;touch-action:none">
+            <div style="position:relative;width:100%;height:6px;border-radius:999px;background:rgba(42,39,51,.1)">
+              <div style="position:absolute;left:0;top:0;height:6px;border-radius:999px;background:#6B5CE7;width:{{ agePct }}"></div>
+              <div style="position:absolute;top:-13px;left:{{ agePct }};width:32px;height:32px;margin-left:-16px;border-radius:999px;background:#FFF6E5;border:2px solid rgba(61,58,70,.5);box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08)"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;width:100%;font-size:13px;color:rgba(42,39,51,.38);margin-top:-32px"><span>60</span><span>100</span></div>
+          <div style="font-size:20px;font-weight:600;color:#6B5CE7;text-align:center;text-wrap:pretty">Vậy bạn còn khoảng {{ lifeDays }} ngày.</div>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18)">Tiếp tục</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">O7</span><span style="font-size:15px;font-weight:500;color:#2A2733">Quan tâm · chọn thật</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:-20px;top:460px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733">
+          <span>9:41</span>
+          <svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg>
+        </div>
+        <div style="position:absolute;top:63px;left:20px;right:20px;display:flex;align-items:center;gap:12px;height:40px">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"></path></svg>
+          <div style="flex:1;height:3px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="width:85.8%;height:3px;border-radius:999px;background:#6B5CE7"></div></div>
+          <span style="font-size:15px;color:rgba(42,39,51,.6)">Bỏ qua</span>
+        </div>
+        <div style="position:absolute;top:115px;left:20px;right:20px;display:flex;align-items:flex-start;gap:12px">
+          <dc-import name="Nee" expression="{{ neeMood }}" phase="full" style="width:96px;flex:0 0 96px;position:relative;z-index:2" hint-size="96px,110px"></dc-import>
+          <div style="position:relative;flex:1;margin-top:6px;padding:16px;border-radius:18px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05)">
+            <div style="position:absolute;left:-5px;top:20px;width:12px;height:12px;background:rgba(255,255,255,.68);border-left:1px solid rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.7);transform:rotate(45deg);border-radius:2px"></div>
+            <div style="position:relative;font-size:17px;line-height:1.45;color:#2A2733">Bạn quan tâm điều gì?</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:288px;left:20px;right:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+            <div onClick="{{ c.toggle }}" style="height:84px;border-radius:18px;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;background:{{ c.bg }};border:1px solid {{ c.border }}">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+                <span style="font-size:15px;font-weight:500;color:#2A2733;line-height:1.25">{{ c.label }}</span>
+                <sc-if value="{{ c.on }}"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#6B5CE7"></circle><path d="m6 10.4 2.6 2.6L14.2 7.4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></sc-if>
+              </div>
+              <span style="font-size:13px;color:rgba(42,39,51,.38)">{{ c.hint }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18);opacity:{{ chipOpacity }}">Tiếp tục</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:11px;font-weight:600;letter-spacing:.66px;color:#6B5CE7">O8</span><span style="font-size:15px;font-weight:500;color:#2A2733">Hé lộ</span></div>
+      <div style="position:relative;width:430px;height:932px;border-radius:44px;overflow:hidden;background:#FAF8F5;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(42,39,51,.08),0 32px 72px rgba(42,39,51,.07)">
+        <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,174,255,.24) 0%,rgba(184,174,255,0) 66%);left:5px;top:120px"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:59px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 32px 10px;font-size:15px;font-weight:600;color:#2A2733">
+          <span>9:41</span>
+          <svg width="72" height="12" viewBox="0 0 72 12" fill="#2A2733"><rect x="0" y="7" width="3" height="5" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="1" width="3" height="11" rx="1"></rect><path d="M23 4.2a9 9 0 0 1 11 0l-1.4 1.7a6.7 6.7 0 0 0-8.2 0z"></path><path d="M25.6 7.2a5.4 5.4 0 0 1 5.8 0l-2.9 3.4z"></path><rect x="41" y="2" width="22" height="10" rx="3" opacity=".35"></rect><rect x="43" y="4" width="15" height="6" rx="1.5"></rect><rect x="64.5" y="5" width="2" height="4" rx="1" opacity=".4"></rect></svg>
+        </div>
+        <div style="position:absolute;top:63px;left:20px;right:20px;display:flex;align-items:center;gap:12px;height:40px">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2A2733" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"></path></svg>
+          <div style="flex:1;height:3px;border-radius:999px;background:rgba(42,39,51,.1)"><div style="width:100%;height:3px;border-radius:999px;background:#6B5CE7"></div></div>
+          <span style="font-size:15px;color:rgba(42,39,51,.38)">Bỏ qua</span>
+        </div>
+        <div style="position:absolute;top:132px;left:0;right:0;display:flex;justify-content:center">
+          <dc-import name="Nee" expression="celebrating" phase="full" style="width:172px" hint-size="172px,198px"></dc-import>
+        </div>
+        <div style="position:absolute;top:356px;left:20px;right:20px;font-size:28px;font-weight:700;letter-spacing:-.42px;color:#2A2733;text-align:center;text-wrap:pretty">Đây là thời gian của bạn, {{ displayName }}.</div>
+        <div style="position:absolute;top:456px;left:20px;right:20px;display:flex;flex-direction:column;gap:12px">
+          <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font-size:15px;font-weight:500;color:rgba(42,39,51,.6)">Phút còn lại hôm nay</span>
+            <span style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#2A2733">{{ minsLeft }}</span>
+          </div>
+          <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font-size:15px;font-weight:500;color:rgba(42,39,51,.6)">Ngày còn lại năm nay</span>
+            <span style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#2A2733">{{ yearDays }}</span>
+          </div>
+          <div style="padding:20px;border-radius:22px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-bottom-color:rgba(255,255,255,.3);border-right-color:rgba(255,255,255,.3);box-shadow:0 1px 2px rgba(42,39,51,.05),0 6px 16px rgba(42,39,51,.06),0 16px 40px rgba(42,39,51,.05),inset 0 1px 0 rgba(255,255,255,1);display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font-size:15px;font-weight:500;color:rgba(42,39,51,.6)">Ngày còn lại của đời</span>
+            <span style="font-size:28px;font-weight:700;letter-spacing:-.42px;font-variant-numeric:tabular-nums;color:#2A2733">{{ lifeDays }}</span>
+          </div>
+          <div style="font-size:17px;line-height:1.45;color:rgba(42,39,51,.6);text-align:center;padding:0 12px;text-wrap:pretty">Không ít, cũng không nhiều.</div>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:74px;height:56px;border-radius:18px;background:#6B5CE7;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#FFFFFF;box-shadow:0 2px 4px rgba(42,39,51,.06),0 12px 28px rgba(107,92,231,.18)">Bắt đầu</div>
+        <div style="position:absolute;bottom:9px;left:145px;width:140px;height:5px;border-radius:999px;background:rgba(42,39,51,.22)"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const MONTHS = ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
+const CHIPS = [
+  { label: 'Thời gian trong ngày', hint: '1440' },
+  { label: 'Đời mình còn bao lâu', hint: 'Đời' },
+  { label: 'Một năm đang qua', hint: 'Năm' },
+  { label: 'Tĩnh tâm, bình an', hint: 'Bình an' },
+  { label: 'Tài lộc, may mắn', hint: 'Tài lộc' },
+  { label: 'Lịch âm, can chi', hint: 'Lịch âm' }
+];
+
+class Component extends DCLogic {
+  state = { name: '', day: 12, month: 8, year: 1996, age: 78, picked: [1, 5], reacted: false, now: new Date() };
+
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ now: new Date() }), 1000);
+  }
+  componentWillUnmount() { clearInterval(this.timer); if (this.moodTimer) clearTimeout(this.moodTimer); }
+
+  vn(n) { return Math.max(0, Math.round(n)).toLocaleString('vi-VN'); }
+
+  wheel(values, current, key, fmt) {
+    const idx = values.indexOf(current);
+    const rows = [];
+    for (let d = -2; d <= 2; d++) {
+      const i = idx + d;
+      if (i < 0 || i >= values.length) { rows.push({ label: '', weight: 400, color: 'transparent', bg: 'transparent', shadow: 'none', rule: 'none', pick: () => {} }); continue; }
+      const v = values[i];
+      const sel = d === 0;
+      rows.push({
+        label: fmt ? fmt(v) : String(v),
+        weight: sel ? 600 : 400,
+        color: sel ? '#2A2733' : (Math.abs(d) === 1 ? 'rgba(42,39,51,.6)' : 'rgba(42,39,51,.38)'),
+        bg: sel ? 'rgba(255,255,255,.55)' : 'transparent',
+        shadow: sel ? '0 2px 4px rgba(42,39,51,.06), 0 12px 28px rgba(42,39,51,.08)' : 'none',
+        rule: sel ? '1px solid #6B5CE7' : 'none',
+        pick: () => this.setState({ [key]: v })
+      });
+    }
+    return rows;
+  }
+
+  react() {
+    this.setState({ reacted: true });
+    clearTimeout(this.moodTimer);
+    this.moodTimer = setTimeout(() => this.setState({ reacted: false }), 1200);
+  }
+
+  setAgeFromEvent(e) {
+    const el = this.slider;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+    this.setState({ age: Math.round(60 + p * 40) });
+  }
+
+  renderVals() {
+    const now = this.state.now;
+    const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    const mins = (endOfDay - now) / 60000;
+    const endOfYear = new Date(now.getFullYear() + 1, 0, 1);
+    const yearDays = (endOfYear - now) / 86400000;
+    const death = new Date(this.state.year + this.state.age, this.state.month - 1, this.state.day);
+    const lifeDays = (death - now) / 86400000;
+    const years = [];
+    for (let y = 1950; y <= 2012; y++) years.push(y);
+    const days = [];
+    for (let d = 1; d <= 31; d++) days.push(d);
+    const monthsN = [];
+    for (let m = 1; m <= 12; m++) monthsN.push(m);
+
+    return {
+      name: this.state.name,
+      displayName: this.state.name.trim() || 'Minh',
+      onName: (e) => this.setState({ name: e.target.value }),
+      nameOpacity: this.state.name.trim() ? 1 : 0.25,
+      minsLeft: this.vn(mins),
+      yearDays: this.vn(yearDays),
+      lifeDays: this.vn(lifeDays),
+      age: this.state.age,
+      agePct: ((this.state.age - 60) / 40 * 100).toFixed(1) + '%',
+      sliderRef: (el) => { this.slider = el; },
+      onSlide: (e) => {
+        this.setAgeFromEvent(e);
+        const move = (ev) => this.setAgeFromEvent(ev);
+        const up = () => { window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); };
+        window.addEventListener('pointermove', move);
+        window.addEventListener('pointerup', up);
+      },
+      dayRows: this.wheel(days, this.state.day, 'day'),
+      monthRows: this.wheel(monthsN, this.state.month, 'month', (m) => MONTHS[m - 1]),
+      yearRows: this.wheel(years, this.state.year, 'year'),
+      chips: CHIPS.map((c, i) => {
+        const on = this.state.picked.indexOf(i) >= 0;
+        return {
+          label: c.label, hint: c.hint, on,
+          bg: on ? 'rgba(107,92,231,.06)' : 'rgba(255,255,255,.55)',
+          border: on ? '#6B5CE7' : 'rgba(255,255,255,.7)',
+          toggle: () => {
+            const next = on ? this.state.picked.filter((x) => x !== i) : this.state.picked.concat([i]);
+            this.setState({ picked: next });
+            if (!on) this.react();
+          }
+        };
+      }),
+      chipOpacity: this.state.picked.length ? 1 : 0.25,
+      neeMood: this.state.reacted ? 'happy' : 'curious'
+    };
+  }
+}
+</script>
+</body>
+</html>
